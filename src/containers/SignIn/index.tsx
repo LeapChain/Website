@@ -6,7 +6,7 @@ import {AuthContainer} from 'components';
 import {Form, FormButton, FormInput} from 'components/FormComponents';
 import {login} from 'dispatchers/app';
 import {AppDispatch} from 'types/store';
-import {formatAPIError} from 'utils/errors';
+import {formatAPIError, Error} from 'utils/errors';
 import yup from 'utils/yup';
 
 const initialValues = {
@@ -30,7 +30,7 @@ const SignIn: FC = () => {
       history.push(`/users/${data.user.pk}`);
     } catch (error) {
       setSubmitting(false);
-      setErrorMessage(formatAPIError(error));
+      setErrorMessage(formatAPIError(error as Error));
     }
   };
 

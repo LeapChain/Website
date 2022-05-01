@@ -59,10 +59,10 @@ const Modal: SFC<ComponentProps> = ({
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [handleKeyDown]);
 
-  const ignoreDirty = useMemo<boolean>(() => ignoreDirtyProps || Object.keys(initialValues).length === 0, [
-    ignoreDirtyProps,
-    initialValues,
-  ]);
+  const ignoreDirty = useMemo<boolean>(
+    () => ignoreDirtyProps || Object.keys(initialValues).length === 0,
+    [ignoreDirtyProps, initialValues],
+  );
 
   const cancelProps = useMemo<ModalButtonProps>(() => {
     if (typeof cancelButton === 'string') {

@@ -17,16 +17,8 @@ interface UseFormContextOutput<V> {
 }
 
 function useFormContext<V = Values>(): UseFormContextOutput<V> {
-  const {
-    errors,
-    handleChange,
-    isValid,
-    setFieldTouched,
-    setFieldValue,
-    touched,
-    validateField,
-    values,
-  } = useFormikContext<V>();
+  const {errors, handleChange, isValid, setFieldTouched, setFieldValue, touched, validateField, values} =
+    useFormikContext<V>();
 
   return {
     errors,

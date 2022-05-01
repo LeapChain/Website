@@ -11,6 +11,7 @@ import {APIState, APIProgress, INITIAL_API_STATE} from 'types/api';
 import {NavigationItem} from 'types/navigation';
 import {PageDataObject} from 'types/page-data';
 import {CoreTeamMember, TeamsUrlParams, TeamTabOptions} from 'types/teams';
+import {formatAPIError, Error} from 'utils/errors';
 
 import InternalTeamMemberPayments from './Resources/InternalTeamMemberPayments';
 import InternalBountyAccountRefills from './Resources/InternalBountyAccountRefills';
@@ -92,7 +93,7 @@ const Teams: FC = () => {
         setTeams(sortedCoreTeams);
         setAPIState({...apiState, progress: APIProgress.SUCCESS});
       } catch (err) {
-        setAPIState({error: err.message, progress: APIProgress.ERR});
+        setAPIState({error: formatAPIError(err as Error), progress: APIProgress.ERR});
       }
     };
     fetchAndProcessTeams();

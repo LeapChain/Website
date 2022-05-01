@@ -89,12 +89,14 @@ const Bounties: FC = () => {
     setSortByOption(selectedOption);
   };
 
-  const handleLabelClick = (labelName: string): GenericVoidFunction => (): void => {
-    const results = selectedLabelNames.includes(labelName)
-      ? selectedLabelNames.filter((name) => name !== labelName)
-      : [...selectedLabelNames, labelName];
-    setSelectedLabelNames(results);
-  };
+  const handleLabelClick =
+    (labelName: string): GenericVoidFunction =>
+    (): void => {
+      const results = selectedLabelNames.includes(labelName)
+        ? selectedLabelNames.filter((name) => name !== labelName)
+        : [...selectedLabelNames, labelName];
+      setSelectedLabelNames(results);
+    };
 
   const handleSorting = () => {
     setSortByOrder((order) => (order === 'asc' ? 'desc' : 'asc'));

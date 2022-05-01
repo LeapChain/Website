@@ -3,7 +3,7 @@ import React, {FC, ReactNode, useState} from 'react';
 import * as api from 'apis/users';
 import {AuthContainer, Container} from 'components';
 import {Form, FormButton, FormInput} from 'components/FormComponents';
-import {formatAPIError} from 'utils/errors';
+import {formatAPIError, Error} from 'utils/errors';
 import yup from 'utils/yup';
 
 import './CreateAccount.scss';
@@ -34,7 +34,7 @@ const CreateAccount: FC<ComponentProps> = ({disabled = false}) => {
       await api.createUser({display_name: trimmedDisplayName, email, password});
       setCreatingAccount(false);
     } catch (error) {
-      setErrorMessage(formatAPIError(error));
+      setErrorMessage(formatAPIError(error as Error));
     } finally {
       setSubmitting(false);
     }
