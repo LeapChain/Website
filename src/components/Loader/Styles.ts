@@ -1,5 +1,5 @@
 import styled, {keyframes} from 'styled-components';
-import {Icon} from '@thenewboston/ui';
+import {Icon} from '@leapchain/ui';
 
 const spin = keyframes`
     0% {

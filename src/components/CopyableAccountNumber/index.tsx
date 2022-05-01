@@ -1,6 +1,6 @@
 import React from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard';
-import {Icon, IconType} from '@thenewboston/ui';
+import {Icon, IconType} from '@leapchain/ui';
 
 import {SFC} from 'types/generic';
 import {displayToast} from 'utils/toast';

@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-import {Icon, IconType} from '@thenewboston/ui';
+import {Icon, IconType} from '@leapchain/ui';
 import {useHistory} from 'react-router';
 
 import {ROUTES} from 'constants/routes';

@@ -1,6 +1,6 @@
 import React, {FC, memo, ReactNode} from 'react';
 import clsx from 'clsx';
-import {Icon, IconType} from '@thenewboston/ui';
+import {Icon, IconType} from '@leapchain/ui';
 
 import {Asset} from 'types/assets';
 import {A, Container, PageTitle} from 'components';

@@ -3,7 +3,7 @@ import {useHistory, useParams} from 'react-router-dom';
 import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 import parseISO from 'date-fns/parseISO';
 import intersection from 'lodash/intersection';
-import {Icon, IconType} from '@thenewboston/ui';
+import {Icon, IconType} from '@leapchain/ui';
 
 import {
   BreadcrumbMenu,

@@ -2,8 +2,8 @@ import React, {CSSProperties, ReactNode, useCallback, useEffect, useMemo} from '
 import {createPortal} from 'react-dom';
 import clsx from 'clsx';
 import noop from 'lodash/noop';
-import {Icon, IconType} from '@thenewboston/ui';
-import {bemify} from '@thenewboston/utils';
+import {Icon, IconType} from '@leapchain/ui';
+import {bemify} from '@leapchain/utils';
 
 import {Form, FormButton, FormButtonProps} from 'components/FormComponents';
 import Loader from 'components/FormElements/Loader';

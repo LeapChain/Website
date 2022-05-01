@@ -1,6 +1,6 @@
 import React, {FC, ReactNode, useCallback, useState} from 'react';
 import clsx from 'clsx';
-import {Icon, IconType} from '@thenewboston/ui';
+import {Icon, IconType} from '@leapchain/ui';
 
 import {Popover} from 'components';
 import {useWindowDimensions} from 'hooks';

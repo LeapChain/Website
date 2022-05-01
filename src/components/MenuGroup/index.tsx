@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {RouteComponentProps, withRouter} from 'react-router-dom';
-import {IconType} from '@thenewboston/ui';
+import {IconType} from '@leapchain/ui';
 
 import {SFC} from 'types/generic';
 import {getFirstPathParam, getFirstThreePathParams} from 'utils/urls';

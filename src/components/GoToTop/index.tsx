@@ -1,5 +1,5 @@
 import React, {useCallback, useEffect, useState} from 'react';
-import {IconType} from '@thenewboston/ui';
+import {IconType} from '@leapchain/ui';
 
 import {SFC} from 'types/generic';
 

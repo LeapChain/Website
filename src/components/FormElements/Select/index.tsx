@@ -5,7 +5,7 @@ import ReactSelect, {ActionMeta, FocusEventHandler, FormatOptionLabelMeta} from 
 import ReactSelectCreatable from 'react-select/creatable';
 import {ValueType} from 'react-select/src/types';
 import clsx from 'clsx';
-import {bemify} from '@thenewboston/utils';
+import {bemify} from '@leapchain/utils';
 
 import {SFC} from 'types/generic';
 import {InputOption} from 'types/forms';

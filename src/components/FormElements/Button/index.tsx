@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from 'react';
 import clsx from 'clsx';
-import {bemify} from '@thenewboston/utils';
+import {bemify} from '@leapchain/utils';
 import {SFC} from 'types/generic';
 
 import './Button.scss';
@@ -34,7 +34,7 @@ const Button: SFC<BaseButtonProps & React.HTMLProps<HTMLButtonElement>> = ({
   }, [focused, buttonRef]);
 
   // temporarily changed className to ButtonWebsite so that it does not conflict with
-  // @thenewboston/ui 's styling
+  // @leapchain/ui 's styling
   return (
     <button
       className={clsx('ButtonWebsite', `ButtonWebsite--${variant}`, `ButtonWebsite--${color}`, className, {

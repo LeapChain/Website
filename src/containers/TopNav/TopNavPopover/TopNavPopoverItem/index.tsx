@@ -1,5 +1,5 @@
 import React, {forwardRef, KeyboardEvent} from 'react';
-import {IconType} from '@thenewboston/ui';
+import {IconType} from '@leapchain/ui';
 
 import * as S from './Styles';
 

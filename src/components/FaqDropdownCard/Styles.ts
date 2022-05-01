@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import colors from 'styles/colors';
 import {h3} from 'styles/fonts';
-import {Icon} from '@thenewboston/ui';
+import {Icon} from '@leapchain/ui';
 
 import {Link} from 'react-router-dom';
 

@@ -1,6 +1,6 @@
 import React, {FC, ReactNode, useState} from 'react';
 import {useHistory} from 'react-router-dom';
-import {Icon, IconType} from '@thenewboston/ui';
+import {Icon, IconType} from '@leapchain/ui';
 
 import {ROUTES, URLS} from 'constants/routes';
 import TnbLogo from '../../../assets/svgs/TnbLogo';

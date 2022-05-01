@@ -1,6 +1,6 @@
 import styled, {css, keyframes} from 'styled-components';
 
-import {Icon} from '@thenewboston/ui';
+import {Icon} from '@leapchain/ui';
 import {Link} from 'react-router-dom';
 import {A, Button} from 'components';
 import {NAVBAR_HEIGHT} from 'constants/offsets';

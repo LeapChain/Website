@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import {fontWeightMedium} from 'styles/fonts/fontWeights';
 import zIndex from 'styles/zIndex';
-import {Icon} from '@thenewboston/ui';
+import {Icon} from '@leapchain/ui';
 
 export const BreadcrumbBar = styled.div`
   align-items: center;

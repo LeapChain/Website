@@ -2,7 +2,7 @@ import React from 'react';
 import {createPortal} from 'react-dom';
 import clsx from 'clsx';
 import {SFC} from 'types/generic';
-import {bemify} from '@thenewboston/utils';
+import {bemify} from '@leapchain/utils';
 import * as S from './Style';
 
 interface ComponentProps {

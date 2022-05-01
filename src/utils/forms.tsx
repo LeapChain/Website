@@ -1,7 +1,7 @@
 import React, {ReactNode} from 'react';
 import clsx from 'clsx';
 import {ErrorMessage as FormikErrorMessageWrapper} from 'formik';
-import {bemify} from '@thenewboston/utils';
+import {bemify} from '@leapchain/utils';
 
 import {ErrorMessage, RequiredAsterisk} from 'components';
 

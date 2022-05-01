@@ -3,7 +3,7 @@
 import React, {useMemo, useState} from 'react';
 import clsx from 'clsx';
 import noop from 'lodash/noop';
-import {bemify} from '@thenewboston/utils';
+import {bemify} from '@leapchain/utils';
 
 import {BaseRadioProps, Radio} from 'components/FormElements';
 import {useFormContext} from 'hooks';

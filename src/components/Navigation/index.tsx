@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {useHistory} from 'react-router';
 import clsx from 'clsx';
-import {IconType} from '@thenewboston/ui';
+import {IconType} from '@leapchain/ui';
 import {SFC} from 'types/generic';
 
 import * as S from './Styles';

@@ -1,6 +1,6 @@
 import React, {FC, KeyboardEvent, ReactNode, useCallback, useEffect, useRef} from 'react';
 import {useHistory} from 'react-router-dom';
-import {IconType} from '@thenewboston/ui';
+import {IconType} from '@leapchain/ui';
 
 import {Popover} from 'components';
 import {useWindowDimensions} from 'hooks';

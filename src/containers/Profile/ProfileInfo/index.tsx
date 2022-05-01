@@ -1,7 +1,7 @@
 import React, {FC, useEffect, useState} from 'react';
 import {useSelector} from 'react-redux';
 import {useParams} from 'react-router-dom';
-import {Icon, IconType} from '@thenewboston/ui';
+import {Icon, IconType} from '@leapchain/ui';
 
 import {api as teamsApi, TeamMemberResponse} from 'apis/teams';
 import {A, Avatar, CopyableAccountNumber, Loader, Qr} from 'components';

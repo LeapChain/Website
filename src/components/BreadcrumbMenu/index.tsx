@@ -1,7 +1,7 @@
 import React, {ReactNode, useEffect, useState} from 'react';
 import useOnclickOutside from 'react-cool-onclickoutside';
 import {useLocation} from 'react-router-dom';
-import {Icon, IconType} from '@thenewboston/ui';
+import {Icon, IconType} from '@leapchain/ui';
 
 import {Shadow} from 'components';
 import {SFC} from 'types/generic';

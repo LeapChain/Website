@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import colors from 'styles/colors';
 import {b1} from 'styles/fonts';
-import {Icon} from '@thenewboston/ui';
+import {Icon} from '@leapchain/ui';
 
 export const Container = styled.div`
   align-items: center;

@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import {bemify} from '@thenewboston/utils';
+import {bemify} from '@leapchain/utils';
 import {SFC} from 'types/generic';
 
 import './DocImage.scss';

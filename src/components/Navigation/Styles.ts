@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import * as FontWeight from 'styles/fonts/fontWeights';
 import colors from 'styles/colors';
-import {Icon} from '@thenewboston/ui';
+import {Icon} from '@leapchain/ui';
 
 export const Navigation = styled.div`
   align-items: center;

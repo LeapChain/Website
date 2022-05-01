@@ -1,6 +1,6 @@
 import React, {ReactNode} from 'react';
 import clsx from 'clsx';
-import {bemify} from '@thenewboston/utils';
+import {bemify} from '@leapchain/utils';
 
 import {HashLink} from 'components';
 import {SFC} from 'types/generic';

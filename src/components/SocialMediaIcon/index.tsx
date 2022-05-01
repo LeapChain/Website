@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import {Icon} from '@thenewboston/ui';
+import {Icon} from '@leapchain/ui';
 
 import {A} from 'components';
 import {SFC} from 'types/generic';

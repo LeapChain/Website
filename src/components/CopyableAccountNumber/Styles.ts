@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {Icon} from '@thenewboston/ui';
+import {Icon} from '@leapchain/ui';
 import colors from 'styles/colors';
 
 export const Container = styled.div`

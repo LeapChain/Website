@@ -1,6 +1,6 @@
 import React, {ReactNode, useEffect} from 'react';
 import {useLocation} from 'react-router-dom';
-import {Icon, IconType} from '@thenewboston/ui';
+import {Icon, IconType} from '@leapchain/ui';
 
 import {useBooleanState} from 'hooks';
 import {SFC} from 'types/generic';

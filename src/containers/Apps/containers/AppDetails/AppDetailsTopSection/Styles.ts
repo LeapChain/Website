@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {Icon} from '@thenewboston/ui';
+import {Icon} from '@leapchain/ui';
 
 import {Container as SharedContainer, Avatar as SharedAvatar} from 'components';
 import colors from 'styles/colors';

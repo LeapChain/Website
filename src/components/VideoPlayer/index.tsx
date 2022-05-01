@@ -2,7 +2,7 @@ import React from 'react';
 import ReactPlayerYouTube from 'react-player/youtube';
 import ReactPlayerVimeo from 'react-player/vimeo';
 import clsx from 'clsx';
-import {bemify} from '@thenewboston/utils';
+import {bemify} from '@leapchain/utils';
 
 import {SFC} from 'types/generic';
 import {Source} from 'types/tutorials';

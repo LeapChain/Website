@@ -1,6 +1,6 @@
 import styled, {css} from 'styled-components';
 
-import {Icon} from '@thenewboston/ui';
+import {Icon} from '@leapchain/ui';
 
 import colors from 'styles/colors';
 import {b1} from 'styles/fonts';

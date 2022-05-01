@@ -1,5 +1,5 @@
 import {SocialMedia} from 'types/social-media';
-import {IconType} from '@thenewboston/ui';
+import {IconType} from '@leapchain/ui';
 
 export const socialMediaUrls = {
   [SocialMedia.discord]: 'https://discord.gg/thenewboston',

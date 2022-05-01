@@ -1,5 +1,5 @@
 import React, {FC, ReactNode, useCallback} from 'react';
-import {Icon, IconType} from '@thenewboston/ui';
+import {Icon, IconType} from '@leapchain/ui';
 import {A, DocList} from 'components';
 import {CoreTeam} from 'types/teams';
 

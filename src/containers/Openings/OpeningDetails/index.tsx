@@ -1,6 +1,6 @@
 import React, {FC, ReactNode} from 'react';
 import {useHistory, useLocation} from 'react-router-dom';
-import {Icon, IconType} from '@thenewboston/ui';
+import {Icon, IconType} from '@leapchain/ui';
 
 import {Button} from 'components';
 import {ROUTES} from 'constants/routes';

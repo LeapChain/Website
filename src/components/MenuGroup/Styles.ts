@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import colors from 'styles/colors';
 import fonts from 'styles/fonts/base';
 
-import {Icon} from '@thenewboston/ui';
+import {Icon} from '@leapchain/ui';
 
 export interface Props {
   expanded: boolean;

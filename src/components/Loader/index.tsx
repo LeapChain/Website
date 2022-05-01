@@ -1,5 +1,5 @@
 import React, {memo} from 'react';
-import {IconType} from '@thenewboston/ui';
+import {IconType} from '@leapchain/ui';
 
 import {SFC} from 'types/generic';
 

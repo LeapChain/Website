@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import {Icon} from '@thenewboston/ui';
+import {Icon} from '@leapchain/ui';
 
 export const NewWindowIcon = styled(Icon)`
   display: inline-flex;
