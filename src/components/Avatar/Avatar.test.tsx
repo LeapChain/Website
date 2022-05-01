@@ -41,7 +41,7 @@ describe('Avatar component', () => {
       const devicePixelRatioGetter = jest.fn().mockReturnValue(dpr);
 
       jest.spyOn(global, 'window', 'get').mockImplementation(() =>
-        Object.defineProperty({}, 'devicePixelRatio', {
+        Object.defineProperty(window, 'devicePixelRatio', {
           get: devicePixelRatioGetter,
         }),
       );

@@ -7,7 +7,7 @@ interface ApplicationError {
 // e.g. <h1>Not Found</h1>
 type ServerError = string;
 
-interface Error {
+export interface Error {
   response: {
     data: ApplicationError | ServerError;
     status: number;
