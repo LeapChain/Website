@@ -1,6 +1,5 @@
 import React, {FC, ReactNode, useCallback, useEffect, useMemo, useState} from 'react';
-import {Link} from 'react-router-dom';
-import {useHistory} from 'react-router';
+import {Link, useHistory} from 'react-router-dom';
 
 import {A, Button, CodeSnippet, Container, EmojiIcon, EmojiType, Loader, PageTitle} from 'components';
 import {ROUTES, URLS} from 'constants/routes';
