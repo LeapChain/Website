@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import {useHistory} from 'react-router';
+import {useHistory} from 'react-router-dom';
 
 import {ROUTES} from 'constants/routes';
 import * as S from './Styles';
