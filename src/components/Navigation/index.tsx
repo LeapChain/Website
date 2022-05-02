@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {useHistory} from 'react-router';
+import {useHistory} from 'react-router-dom';
 import clsx from 'clsx';
 import {IconType} from '@leapchain/ui';
 import {SFC} from 'types/generic';
