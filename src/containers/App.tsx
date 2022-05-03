@@ -25,6 +25,8 @@ import Teams from './Teams';
 import TermsOfUse from './TermsOfUse';
 import Wallet from './Wallet';
 
+import {isFeatureEnabled, Feature} from '../utils/featureToggle';
+
 /**
  * Lazy load pages that may contribute a lot to the bundle sizes
  */
@@ -64,29 +66,45 @@ const App: FC = () => {
       <Layout>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path={ROUTES.aboutUs} component={AboutUs} />
-          <Route exact path={`${ROUTES.apps}/:slug?`} component={withSuspense(Apps)} />
+          {isFeatureEnabled(Feature.AboutUs) && <Route exact path={ROUTES.aboutUs} component={AboutUs} />}
+          {isFeatureEnabled(Feature.Apps) && (
+            <Route exact path={`${ROUTES.apps}/:slug?`} component={withSuspense(Apps)} />
+          )}
           <Route exact path={ROUTES.guidelines} component={Guidelines} />
-          <Route exact path={ROUTES.createAccount} render={() => <CreateAccount disabled />} />
-          <Route exact path={ROUTES.donate} component={Donate} />
-          <Redirect exact from={ROUTES.faq} to={`${ROUTES.faq}/${faqFilters[FaqFilterType.all]}`} />
-          <Route exact path={`${ROUTES.faq}/:filter`} component={Faq} />
-          <Route exact path={ROUTES.assets} component={Assets} />
-          <Redirect exact from={ROUTES.openings} to={`${ROUTES.openings}/All`} />
-          <Route exact path={`${ROUTES.openings}/:category/:openingId?`} render={() => <Openings />} />
-          <Route exact path={ROUTES.social} component={Social} />
-          <Redirect exact from={ROUTES.bounties} to={`${ROUTES.bounties}/All`} />
-          <Route exact path={`${ROUTES.bounties}/:repository`} component={Bounties} />
-          <Redirect exact path={ROUTES.teams} to={`${ROUTES.teams}/All/Members`} />
-          <Route exact path={`${ROUTES.teams}/:team/:tab?/:resource?`} component={Teams} />
-          <Route path={`${ROUTES.wallet}/:chapter?`} component={Wallet} />
-          <Route path={ROUTES.download} component={Download} />
+          {isFeatureEnabled(Feature.CreateAccount) && (
+            <Route exact path={ROUTES.createAccount} render={() => <CreateAccount disabled />} />
+          )}
+          {isFeatureEnabled(Feature.Donate) && <Route exact path={ROUTES.donate} component={Donate} />}
+          {isFeatureEnabled(Feature.Faq) && (
+            <Redirect exact from={ROUTES.faq} to={`${ROUTES.faq}/${faqFilters[FaqFilterType.all]}`} />
+          )}
+          {isFeatureEnabled(Feature.Faq) && <Route exact path={`${ROUTES.faq}/:filter`} component={Faq} />}
+          {isFeatureEnabled(Feature.MediaKit) && <Route exact path={ROUTES.assets} component={Assets} />}
+          {isFeatureEnabled(Feature.Careers) && <Redirect exact from={ROUTES.openings} to={`${ROUTES.openings}/All`} />}
+          {isFeatureEnabled(Feature.Careers) && (
+            <Route exact path={`${ROUTES.openings}/:category/:openingId?`} render={() => <Openings />} />
+          )}
+          {isFeatureEnabled(Feature.JoinTheCommunity) && <Route exact path={ROUTES.social} component={Social} />}
+          {isFeatureEnabled(Feature.Bounties) && (
+            <Redirect exact from={ROUTES.bounties} to={`${ROUTES.bounties}/All`} />
+          )}
+          {isFeatureEnabled(Feature.Bounties) && (
+            <Route exact path={`${ROUTES.bounties}/:repository`} component={Bounties} />
+          )}
+          {isFeatureEnabled(Feature.MeetTheTeam) && (
+            <Redirect exact path={ROUTES.teams} to={`${ROUTES.teams}/All/Members`} />
+          )}
+          {isFeatureEnabled(Feature.MeetTheTeam) && (
+            <Route exact path={`${ROUTES.teams}/:team/:tab?/:resource?`} component={Teams} />
+          )}
+          {isFeatureEnabled(Feature.DownloadWallet) && <Route path={ROUTES.download} component={Download} />}
+          {isFeatureEnabled(Feature.Roadmap) && <Route path={ROUTES.roadmap} component={Roadmap} />}
+          {isFeatureEnabled(Feature.WalletDocs) && <Route path={`${ROUTES.wallet}/:chapter?`} component={Wallet} />}
           <Route path={ROUTES.privacyPolicy} component={PrivacyPolicy} />
-          <Route path={ROUTES.roadmap} component={Roadmap} />
-          <Route exact path={ROUTES.signin} component={SignIn} />
-          <Route exact path={ROUTES.signout} component={SignOut} />
+          {isFeatureEnabled(Feature.Login) && <Route exact path={ROUTES.signin} component={SignIn} />}
+          {isFeatureEnabled(Feature.Login) && <Route exact path={ROUTES.signout} component={SignOut} />}
           <Route exact path={ROUTES.termsOfUse} component={TermsOfUse} />
-          <Route path={`${ROUTES.users}/:userId`} component={Profile} />
+          {isFeatureEnabled(Feature.Profile) && <Route path={`${ROUTES.users}/:userId`} component={Profile} />}
           <Route path={ROUTES.walletProgress} component={withSuspense(WalletProgress)} />
           <Redirect to="/" />
         </Switch>

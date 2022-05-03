@@ -4,6 +4,7 @@ import {ROUTES, URLS} from 'constants/routes';
 import colors from 'styles/colors';
 import {SocialMedia} from 'types/social-media';
 import {socialMediaUrls, socialMediaFooterIcons} from 'utils/social-media';
+import {isFeatureEnabled, Feature} from 'utils/featureToggle';
 
 import FooterNavList from './FooterNavList';
 import * as S from './Styles';
@@ -16,29 +17,49 @@ const navLists = [
   {
     header: 'Get TNBC',
     links: [
-      {
-        title: 'Bounties',
-        url: ROUTES.bounties,
-      },
-      {
-        title: 'Careers',
-        url: ROUTES.openings,
-      },
-      {
-        isExternal: true,
-        newWindow: true,
-        title: 'Faucet',
-        url: URLS.apps.faucet,
-      },
-      {
-        isExternal: true,
-        title: 'Create Projects',
-        url: URLS.developerPortal.projects,
-      },
-      {
-        title: 'Apps',
-        url: ROUTES.apps,
-      },
+      ...(isFeatureEnabled(Feature.Bounties)
+        ? [
+            {
+              title: 'Bounties',
+              url: ROUTES.bounties,
+            },
+          ]
+        : []),
+      ...(isFeatureEnabled(Feature.Careers)
+        ? [
+            {
+              title: 'Careers',
+              url: ROUTES.openings,
+            },
+          ]
+        : []),
+      ...(isFeatureEnabled(Feature.Faucet)
+        ? [
+            {
+              isExternal: true,
+              newWindow: true,
+              title: 'Faucet',
+              url: URLS.apps.faucet,
+            },
+          ]
+        : []),
+      ...(isFeatureEnabled(Feature.Projects)
+        ? [
+            {
+              isExternal: true,
+              title: 'Create Projects',
+              url: URLS.developerPortal.projects,
+            },
+          ]
+        : []),
+      ...(isFeatureEnabled(Feature.Apps)
+        ? [
+            {
+              title: 'Apps',
+              url: ROUTES.apps,
+            },
+          ]
+        : []),
     ],
   },
   {
@@ -50,87 +71,147 @@ const navLists = [
         title: 'Home',
         url: URLS.developerPortal.home,
       },
-      {
-        isExternal: true,
-        newWindow: false,
-        title: 'Living Whitepaper',
-        url: URLS.developerPortal.whitepaper,
-      },
-      {
-        isExternal: true,
-        newWindow: false,
-        title: 'Tutorials',
-        url: URLS.developerPortal.tutorials,
-      },
-      {
-        isExternal: true,
-        newWindow: false,
-        title: 'Projects',
-        url: URLS.developerPortal.projects,
-      },
-      {
-        isExternal: true,
-        newWindow: false,
-        title: 'APIs',
-        url: URLS.developerPortal.api,
-      },
-      {
-        isExternal: true,
-        newWindow: false,
-        title: 'Node Deployment',
-        url: URLS.developerPortal.nodeDeployment,
-      },
-      {
-        isExternal: true,
-        newWindow: false,
-        title: 'SDKs &  Libraries',
-        url: URLS.developerPortal.sdkAndLibraries,
-      },
-      {
-        isExternal: true,
-        newWindow: false,
-        title: 'Utilities',
-        url: URLS.developerPortal.utilities,
-      },
+      ...(isFeatureEnabled(Feature.LivingWhitepaper)
+        ? [
+            {
+              isExternal: true,
+              newWindow: false,
+              title: 'Living Whitepaper',
+              url: URLS.developerPortal.whitepaper,
+            },
+          ]
+        : []),
+      ...(isFeatureEnabled(Feature.Tutorials)
+        ? [
+            {
+              isExternal: true,
+              newWindow: false,
+              title: 'Tutorials',
+              url: URLS.developerPortal.tutorials,
+            },
+          ]
+        : []),
+      ...(isFeatureEnabled(Feature.Projects)
+        ? [
+            {
+              isExternal: true,
+              newWindow: false,
+              title: 'Projects',
+              url: URLS.developerPortal.projects,
+            },
+          ]
+        : []),
+      ...(isFeatureEnabled(Feature.Apis)
+        ? [
+            {
+              isExternal: true,
+              newWindow: false,
+              title: 'APIs',
+              url: URLS.developerPortal.api,
+            },
+          ]
+        : []),
+      ...(isFeatureEnabled(Feature.NodeDeployment)
+        ? [
+            {
+              isExternal: true,
+              newWindow: false,
+              title: 'Node Deployment',
+              url: URLS.developerPortal.nodeDeployment,
+            },
+          ]
+        : []),
+      ...(isFeatureEnabled(Feature.SdksAndLibraries)
+        ? [
+            {
+              isExternal: true,
+              newWindow: false,
+              title: 'SDKs &  Libraries',
+              url: URLS.developerPortal.sdkAndLibraries,
+            },
+          ]
+        : []),
+      ...(isFeatureEnabled(Feature.Utilities)
+        ? [
+            {
+              isExternal: true,
+              newWindow: false,
+              title: 'Utilities',
+              url: URLS.developerPortal.utilities,
+            },
+          ]
+        : []),
     ],
   },
   {
     header: 'Resources',
     links: [
-      {
-        title: 'Roadmap',
-        url: ROUTES.roadmap,
-      },
-      {
-        title: 'FAQ',
-        url: ROUTES.faq,
-      },
-      {
-        isExternal: true,
-        newWindow: true,
-        title: 'Blog',
-        url: URLS.blog,
-      },
-      {
-        title: 'Media Kit',
-        url: ROUTES.assets,
-      },
-      {
-        title: 'Meet the Team',
-        url: ROUTES.teams,
-      },
-      {
-        title: 'About Us',
-        url: ROUTES.aboutUs,
-      },
-      {
-        title: 'Join the Community',
-        url: ROUTES.social,
-      },
-      {
-        title: 'Donate',
-        url: ROUTES.donate,
-      },
+      ...(isFeatureEnabled(Feature.Roadmap)
+        ? [
+            {
+              title: 'Roadmap',
+              url: ROUTES.roadmap,
+            },
+          ]
+        : []),
+      ...(isFeatureEnabled(Feature.Faq)
+        ? [
+            {
+              title: 'FAQ',
+              url: ROUTES.faq,
+            },
+          ]
+        : []),
+      ...(isFeatureEnabled(Feature.Blog)
+        ? [
+            {
+              isExternal: true,
+              newWindow: true,
+              title: 'Blog',
+              url: URLS.blog,
+            },
+          ]
+        : []),
+      ...(isFeatureEnabled(Feature.MediaKit)
+        ? [
+            {
+              title: 'Media Kit',
+              url: ROUTES.assets,
+            },
+          ]
+        : []),
+      ...(isFeatureEnabled(Feature.MeetTheTeam)
+        ? [
+            {
+              title: 'Meet the Team',
+              url: ROUTES.teams,
+            },
+          ]
+        : []),
+      ...(isFeatureEnabled(Feature.AboutUs)
+        ? [
+            {
+              title: 'About Us',
+              url: ROUTES.aboutUs,
+            },
+          ]
+        : []),
+      ...(isFeatureEnabled(Feature.JoinTheCommunity)
+        ? [
+            {
+              title: 'Join the Community',
+              url: ROUTES.social,
+            },
+          ]
+        : []),
+      ...(isFeatureEnabled(Feature.Donate)
+        ? [
+            {
+              title: 'Donate',
+              url: ROUTES.donate,
+            },
+          ]
+        : []),
     ],
   },
   {

@@ -28,13 +28,13 @@ export const ROUTES = {
 };
 
 // External URLs
-const developerPortalUrl = 'https://developer.thenewboston.com';
+const developerPortalUrl = 'https://developer.thenewboston.com'; // TODO: update when ready
 
 export const URLS = {
   apps: {
-    faucet: 'https://tnbfaucet.com/',
+    faucet: 'https://tnbfaucet.com/', // TODO: update when ready
   },
-  blog: 'https://blog.thenewboston.com',
+  blog: 'https://blog.thenewboston.com', // TODO: update when ready
   contact: `mailto:${EMAIL}`,
   developerPortal: {
     api: `${developerPortalUrl}/api`,
@@ -46,7 +46,7 @@ export const URLS = {
     utilities: `${developerPortalUrl}/utilities`,
     whitepaper: `${developerPortalUrl}/whitepaper`,
   },
-  discord: 'https://discord.com/invite/thenewboston',
-  github: 'https://github.com/thenewboston-developers',
+  discord: 'https://discord.gg/WnDvJSGaTA',
+  github: 'https://github.com/LeapChain',
   tnbFaucet: 'https://tnbfaucet.com',
 };

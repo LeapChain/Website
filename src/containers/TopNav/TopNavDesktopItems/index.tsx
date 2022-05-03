@@ -2,12 +2,12 @@ import React, {useMemo, useState} from 'react';
 import {useSelector} from 'react-redux';
 import {useHistory} from 'react-router-dom';
 
-import {isCreateAccountAllowed, isSignInAllowed} from 'config';
 import {ROUTES, URLS} from 'constants/routes';
 import TopNavLink from 'containers/TopNav/TopNavLink';
 import TopNavPopover, {TopNavPopoverItemType} from 'containers/TopNav/TopNavPopover';
 import {selectActiveUser} from 'selectors/state';
 import colors from 'styles/colors';
+import {isFeatureEnabled, Feature} from 'utils/featureToggle';
 import {developerPopoverItems, getTNBCPopoverItems, resourcesPopoverItems} from './constants';
 import TnbLogo from '../../../assets/svgs/TnbLogo';
 import DiscordLogo from '../../../assets/svgs/DiscordLogo';
@@ -53,10 +53,12 @@ const TopNavDesktopItems = () => {
     if (activeUser) return null;
     return (
       <>
-        {isCreateAccountAllowed && (
+        {isFeatureEnabled(Feature.CreateAccount) && (
           <TopNavLink className="TopNavDesktopItems__right-item" text="Create Account" to={ROUTES.createAccount} />
         )}
-        {isSignInAllowed && <TopNavLink className="TopNavDesktopItems__right-item" text="Sign In" to={ROUTES.signin} />}
+        {isFeatureEnabled(Feature.Login) && (
+          <TopNavLink className="TopNavDesktopItems__right-item" text="Sign In" to={ROUTES.signin} />
+        )}
       </>
     );
   };
@@ -98,17 +100,21 @@ const TopNavDesktopItems = () => {
           />
           Discord
         </S.DiscordButton>
-        <S.DownloadButton onClick={() => history.push(ROUTES.download)} variant="outlined">
-          Download Wallet
-        </S.DownloadButton>
-        <S.AppButton
-          onClick={() => history.push(ROUTES.apps)}
-          onMouseEnter={() => setIsAppsButtonHovered(true)}
-          onMouseLeave={() => setIsAppsButtonHovered(false)}
-        >
-          <TnbLogo color={isAppsButtonHovered ? colors.primary : colors.white} style={{marginRight: '8px'}} />
-          Apps
-        </S.AppButton>
+        {isFeatureEnabled(Feature.DownloadWallet) && (
+          <S.DownloadButton onClick={() => history.push(ROUTES.download)} variant="outlined">
+            Download Wallet
+          </S.DownloadButton>
+        )}
+        {isFeatureEnabled(Feature.Apps) && (
+          <S.AppButton
+            onClick={() => history.push(ROUTES.apps)}
+            onMouseEnter={() => setIsAppsButtonHovered(true)}
+            onMouseLeave={() => setIsAppsButtonHovered(false)}
+          >
+            <TnbLogo color={isAppsButtonHovered ? colors.primary : colors.white} style={{marginRight: '8px'}} />
+            Apps
+          </S.AppButton>
+        )}
       </S.RightSection>
       {renderActiveUser()}
     </S.Container>

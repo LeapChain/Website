@@ -65,7 +65,7 @@ export const Heading = styled.h2`
 export const Paragraph = styled.p`
   ${h3.regular}
   color: ${colors.palette.gray['600']};
-  margin-bottom: 4px;
+  margin-bottom: 20px;
 `;
 
 export const A = styled(AComponent)`

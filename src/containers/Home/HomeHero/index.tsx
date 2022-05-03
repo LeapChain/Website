@@ -6,6 +6,7 @@ import {Button, Loader} from 'components';
 import {ROUTES, URLS} from 'constants/routes';
 import {ApiProgress} from 'constants/api-progress';
 import {useWindowDimensions} from 'hooks';
+import {isFeatureEnabled, Feature} from 'utils/featureToggle';
 
 import DefaultLogoSrc from 'assets/images/logo.png';
 
@@ -42,6 +43,9 @@ const HomeHero: FC = () => {
   React.useEffect(() => {
     try {
       (async () => {
+        if (!isFeatureEnabled(Feature.Apps)) {
+          return;
+        }
         setProgress(ApiProgress.Requesting);
         const appResponse = await getApps(APP_COUNT_MAX);
         const appList = appResponse.map((app) => ({
@@ -90,20 +94,24 @@ const HomeHero: FC = () => {
         community developing on our open source blockchain network.
       </S.Paragraph>
       <S.Actions>
-        <Button
-          variant="contained"
-          color="quaternary"
-          onClick={() => {
-            window.location.href = URLS.developerPortal.tutorials;
-          }}
-        >
-          Watch Tutorials
-        </Button>
-        <Button variant="outlined" onClick={navigateToProjects}>
-          How To Earn
-        </Button>
+        {isFeatureEnabled(Feature.Tutorials) && (
+          <Button
+            variant="contained"
+            color="quaternary"
+            onClick={() => {
+              window.location.href = URLS.developerPortal.tutorials;
+            }}
+          >
+            Watch Tutorials
+          </Button>
+        )}
+        {isFeatureEnabled(Feature.Projects) && (
+          <Button variant="outlined" onClick={navigateToProjects}>
+            How To Earn
+          </Button>
+        )}
       </S.Actions>
-      {renderShowcase()}
+      {isFeatureEnabled(Feature.Apps) && renderShowcase()}
     </S.Container>
   );
 };
