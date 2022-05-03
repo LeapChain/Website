@@ -1,7 +1,7 @@
 import {BaseIssue, BaseRelease, FetchGithubReleasesParams, Issue, Milestone} from 'types/github';
 import {githubGetRequestAbstract} from 'utils/requests';
 
-const BASE_URL = 'https://api.github.com/repos/thenewboston-developers';
+const BASE_URL = 'https://api.github.com/repos/LeapChain';
 
 export async function getIssuesForRepo(repoPathName: string): Promise<Issue[]> {
   return githubGetRequestAbstract<Issue[]>({
