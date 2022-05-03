@@ -3,6 +3,7 @@ import {useHistory} from 'react-router-dom';
 import {Icon, IconType} from '@leapchain/ui';
 
 import {ROUTES, URLS} from 'constants/routes';
+import {isFeatureEnabled, Feature} from 'utils/featureToggle';
 import TnbLogo from '../../../assets/svgs/TnbLogo';
 import DiscordLogo from '../../../assets/svgs/DiscordLogo';
 
@@ -45,11 +46,12 @@ const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, toggleMenu})
             'getTNBC',
             'Get TNBC',
             <>
-              {renderMobileLink('Bounties', ROUTES.bounties)}
-              {renderMobileLink('Career', ROUTES.openings)}
-              {renderMobileLink('Faucet', URLS.apps.faucet, true, true)}
-              {renderMobileLink('Create Projects', URLS.developerPortal.projects, true, false)}
-              {renderMobileLink('Apps', ROUTES.apps)}
+              {isFeatureEnabled(Feature.Bounties) && renderMobileLink('Bounties', ROUTES.bounties)}
+              {isFeatureEnabled(Feature.Careers) && renderMobileLink('Career', ROUTES.openings)}
+              {isFeatureEnabled(Feature.Faucet) && renderMobileLink('Faucet', URLS.apps.faucet, true, true)}
+              {isFeatureEnabled(Feature.Projects) &&
+                renderMobileLink('Create Projects', URLS.developerPortal.projects, true, false)}
+              {isFeatureEnabled(Feature.Apps) && renderMobileLink('Apps', ROUTES.apps)}
             </>,
           )}
           {renderColumn(
@@ -57,27 +59,33 @@ const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, toggleMenu})
             'Developers',
             <>
               {renderMobileLink('Home', URLS.developerPortal.home, true, false)}
-              {renderMobileLink('Living Whitepaper', URLS.developerPortal.whitepaper, true, false)}
-              {renderMobileLink('Tutorials', URLS.developerPortal.tutorials, true, false)}
-              {renderMobileLink('Projects', URLS.developerPortal.projects, true, false)}
-              {renderMobileLink('APIs', URLS.developerPortal.api, true, false)}
-              {renderMobileLink('Node Deployment', URLS.developerPortal.nodeDeployment, true, false)}
-              {renderMobileLink('SDKs & Libraries', URLS.developerPortal.sdkAndLibraries, true, false)}
-              {renderMobileLink('Utilities', URLS.developerPortal.utilities, true, false)}
+              {isFeatureEnabled(Feature.LivingWhitepaper) &&
+                renderMobileLink('Living Whitepaper', URLS.developerPortal.whitepaper, true, false)}
+              {isFeatureEnabled(Feature.Tutorials) &&
+                renderMobileLink('Tutorials', URLS.developerPortal.tutorials, true, false)}
+              {isFeatureEnabled(Feature.Projects) &&
+                renderMobileLink('Projects', URLS.developerPortal.projects, true, false)}
+              {isFeatureEnabled(Feature.Apis) && renderMobileLink('APIs', URLS.developerPortal.api, true, false)}
+              {isFeatureEnabled(Feature.NodeDeployment) &&
+                renderMobileLink('Node Deployment', URLS.developerPortal.nodeDeployment, true, false)}
+              {isFeatureEnabled(Feature.SdksAndLibraries) &&
+                renderMobileLink('SDKs & Libraries', URLS.developerPortal.sdkAndLibraries, true, false)}
+              {isFeatureEnabled(Feature.Utilities) &&
+                renderMobileLink('Utilities', URLS.developerPortal.utilities, true, false)}
             </>,
           )}
           {renderColumn(
             'resources',
             'Resources',
             <>
-              {renderMobileLink('Roadmap', ROUTES.roadmap)}
-              {renderMobileLink('FAQ', ROUTES.faq)}
-              {renderMobileLink('Blog', URLS.blog, true)}
-              {renderMobileLink('Media Kit', ROUTES.assets)}
-              {renderMobileLink('Meet the team', ROUTES.teams)}
-              {renderMobileLink('About Us', ROUTES.aboutUs)}
-              {renderMobileLink('Join the Community', ROUTES.social)}
-              {renderMobileLink('Donate', ROUTES.donate)}
+              {isFeatureEnabled(Feature.Roadmap) && renderMobileLink('Roadmap', ROUTES.roadmap)}
+              {isFeatureEnabled(Feature.Faq) && renderMobileLink('FAQ', ROUTES.faq)}
+              {isFeatureEnabled(Feature.Blog) && renderMobileLink('Blog', URLS.blog, true)}
+              {isFeatureEnabled(Feature.MediaKit) && renderMobileLink('Media Kit', ROUTES.assets)}
+              {isFeatureEnabled(Feature.MeetTheTeam) && renderMobileLink('Meet the team', ROUTES.teams)}
+              {isFeatureEnabled(Feature.AboutUs) && renderMobileLink('About Us', ROUTES.aboutUs)}
+              {isFeatureEnabled(Feature.JoinTheCommunity) && renderMobileLink('Join the Community', ROUTES.social)}
+              {isFeatureEnabled(Feature.Donate) && renderMobileLink('Donate', ROUTES.donate)}
             </>,
           )}
           <S.ButtonsContainer>
@@ -85,13 +93,17 @@ const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, toggleMenu})
               <DiscordLogo style={{marginRight: '8px'}} />
               Discord
             </S.DiscordButton>
-            <S.DownloadButton onClick={() => history.push(ROUTES.download)} variant="outlined">
-              Download Wallet
-            </S.DownloadButton>
-            <S.AppButton onClick={() => history.push(ROUTES.apps)}>
-              <TnbLogo style={{marginRight: '8px'}} />
-              Apps
-            </S.AppButton>
+            {isFeatureEnabled(Feature.DownloadWallet) && (
+              <S.DownloadButton onClick={() => history.push(ROUTES.download)} variant="outlined">
+                Download Wallet
+              </S.DownloadButton>
+            )}
+            {isFeatureEnabled(Feature.Apps) && (
+              <S.AppButton onClick={() => history.push(ROUTES.apps)}>
+                <TnbLogo style={{marginRight: '8px'}} />
+                Apps
+              </S.AppButton>
+            )}
           </S.ButtonsContainer>
         </S.DropdownContainer>
         <S.Overlay onClick={closeMenu} role="button" tabIndex={0} />

@@ -1,6 +1,7 @@
 import React, {FC} from 'react';
 
 import {PageTitle} from 'components';
+import {isFeatureEnabled, Feature} from 'utils/featureToggle';
 import HomeHero from './HomeHero';
 import HomeSpeed from './HomeSpeed';
 import DownloadWallet from './DownloadWallet';
@@ -11,9 +12,9 @@ const Home: FC = () => (
   <>
     <PageTitle title="Home" />
     <HomeHero />
-    <LearnToDevelop />
+    {isFeatureEnabled(Feature.Tutorials) && <LearnToDevelop />}
     <HomeSpeed />
-    <DownloadWallet />
+    {isFeatureEnabled(Feature.DownloadWallet) && <DownloadWallet />}
     <Links />
   </>
 );

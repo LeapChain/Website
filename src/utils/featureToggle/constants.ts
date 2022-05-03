@@ -39,7 +39,7 @@ export const FEATURE_TOGGLES: Partial<Record<Feature, boolean>> = {
   [Feature.Apps]: false,
 
   // Developers Section
-  [Feature.LivingWhitepaper]: false,
+  [Feature.LivingWhitepaper]: true,
   [Feature.Tutorials]: false,
   [Feature.Apis]: false,
   [Feature.NodeDeployment]: false,

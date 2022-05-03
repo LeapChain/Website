@@ -5,6 +5,7 @@ import {EmojiIcon, EmojiType} from 'components';
 import {ROUTES, URLS} from 'constants/routes';
 import {useWindowDimensions} from 'hooks';
 import breakpoints from 'styles/breakpoints';
+import {isFeatureEnabled, Feature} from 'utils/featureToggle';
 
 import * as S from './Styles';
 
@@ -21,22 +22,30 @@ const Links = () => {
       title: 'Discord',
       url: URLS.discord,
     },
-    {
-      description: 'Learn more about us',
-      emoji: EmojiType.ThoughtBalloon,
-      emojiBgColor: '#FFB802',
-      isExternal: false,
-      title: 'FAQ',
-      url: ROUTES.faq,
-    },
-    {
-      description: 'Stay updated with us',
-      emoji: EmojiType.Newspaper,
-      emojiBgColor: '#2DA15D',
-      isExternal: true,
-      title: 'Blog',
-      url: URLS.blog,
-    },
+    ...(isFeatureEnabled(Feature.Faq)
+      ? [
+          {
+            description: 'Learn more about us',
+            emoji: EmojiType.ThoughtBalloon,
+            emojiBgColor: '#FFB802',
+            isExternal: false,
+            title: 'FAQ',
+            url: ROUTES.faq,
+          },
+        ]
+      : []),
+    ...(isFeatureEnabled(Feature.Blog)
+      ? [
+          {
+            description: 'Stay updated with us',
+            emoji: EmojiType.Newspaper,
+            emojiBgColor: '#2DA15D',
+            isExternal: true,
+            title: 'Blog',
+            url: URLS.blog,
+          },
+        ]
+      : []),
     {
       description: 'Send us a direct email',
       emoji: EmojiType.Mail,
