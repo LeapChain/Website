@@ -87,7 +87,7 @@ const HomeHero: FC = () => {
       <S.Heading>
         <S.HeadingSegment highlighted={highlightedHeading === 0}>Learn,</S.HeadingSegment>{' '}
         <S.HeadingSegment highlighted={highlightedHeading === 1}>Develop,</S.HeadingSegment> and{' '}
-        <S.HeadingSegment highlighted={highlightedHeading === 2}>Earn TNBC.</S.HeadingSegment>
+        <S.HeadingSegment highlighted={highlightedHeading === 2}>Earn LEAP.</S.HeadingSegment>
       </S.Heading>
       <S.Paragraph>
         Learn how to develop apps, propose an app idea, and get your app funded. Join thousands of developers in the

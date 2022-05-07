@@ -33,7 +33,7 @@ describe('Footer component', () => {
   test('renders FooterNavLists', () => {
     render(<WrappedComponent />);
 
-    expect(screen.getByText('Get TNBC')).toBeTruthy();
+    expect(screen.getByText('Get LEAP')).toBeTruthy();
     expect(screen.getByText('Developer')).toBeTruthy();
     expect(screen.getByText('Resources')).toBeTruthy();
     expect(screen.getByText('Social')).toBeTruthy();

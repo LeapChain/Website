@@ -38,7 +38,7 @@ const AppsHero: FC = () => {
       <S.Container>
         <S.Title>Explore our apps</S.Title>
         <S.SubTitle>
-          Explore games and a variety of apps built by our community to earn or spend TNBC, the official cryptocurrency
+          Explore games and a variety of apps built by our community to earn or spend LEAP, the official cryptocurrency
           of thenewboston.
         </S.SubTitle>
         <S.DiscordButton

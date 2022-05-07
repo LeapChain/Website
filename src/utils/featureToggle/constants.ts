@@ -31,7 +31,7 @@ export enum Feature {
 }
 
 export const FEATURE_TOGGLES: Partial<Record<Feature, boolean>> = {
-  // Get TNBC Section
+  // Get LEAP Section
   [Feature.Bounties]: true,
   [Feature.Careers]: false,
   [Feature.Faucet]: false,

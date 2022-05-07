@@ -8,7 +8,7 @@ import TopNavPopover, {TopNavPopoverItemType} from 'containers/TopNav/TopNavPopo
 import {selectActiveUser} from 'selectors/state';
 import colors from 'styles/colors';
 import {isFeatureEnabled, Feature} from 'utils/featureToggle';
-import {developerPopoverItems, getTNBCPopoverItems, resourcesPopoverItems} from './constants';
+import {developerPopoverItems, getLEAPPopoverItems, resourcesPopoverItems} from './constants';
 import TnbLogo from '../../../assets/svgs/TnbLogo';
 import DiscordLogo from '../../../assets/svgs/DiscordLogo';
 
@@ -19,7 +19,7 @@ const TopNavDesktopItems = () => {
   const activeUser = useSelector(selectActiveUser);
   const [activeUserAnchorEl, setActiveUserAnchorEl] = useState<HTMLButtonElement | null>(null);
   const [developersAnchorEl, setDevelopersAnchorEl] = useState<HTMLButtonElement | null>(null);
-  const [getTNBCAnchorEl, setGetTNBCAnchorEl] = useState<HTMLButtonElement | null>(null);
+  const [getLEAPAnchorEl, setGetLEAPAnchorEl] = useState<HTMLButtonElement | null>(null);
   const [resourcesAnchorEl, setResourcesAnchorEl] = useState<HTMLButtonElement | null>(null);
   const [isAppsButtonHovered, setIsAppsButtonHovered] = useState(false);
   const [isDiscordButtonHovered, setIsDiscordButtonHovered] = useState(false);
@@ -66,11 +66,11 @@ const TopNavDesktopItems = () => {
   return (
     <S.Container>
       <TopNavPopover
-        anchorEl={getTNBCAnchorEl}
-        buttonText="Get TNBC"
-        items={getTNBCPopoverItems}
+        anchorEl={getLEAPAnchorEl}
+        buttonText="Get LEAP"
+        items={getLEAPPopoverItems}
         popoverId="get-tnbc-popover"
-        setAnchorEl={setGetTNBCAnchorEl}
+        setAnchorEl={setGetLEAPAnchorEl}
       />
       <TopNavPopover
         anchorEl={developersAnchorEl}

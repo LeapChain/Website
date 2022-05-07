@@ -15,7 +15,7 @@ interface ComponentProps {
   toggleMenu(): void;
 }
 
-type SectionStrings = 'developers' | 'getTNBC' | 'resources';
+type SectionStrings = 'developers' | 'getLEAP' | 'resources';
 
 const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, toggleMenu}) => {
   const history = useHistory();
@@ -43,8 +43,8 @@ const TopNavMobileMenu: FC<ComponentProps> = ({closeMenu, menuOpen, toggleMenu})
       <>
         <S.DropdownContainer>
           {renderColumn(
-            'getTNBC',
-            'Get TNBC',
+            'getLEAP',
+            'Get LEAP',
             <>
               {isFeatureEnabled(Feature.Bounties) && renderMobileLink('Bounties', ROUTES.bounties)}
               {isFeatureEnabled(Feature.Careers) && renderMobileLink('Career', ROUTES.openings)}

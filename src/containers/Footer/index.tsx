@@ -15,7 +15,7 @@ interface ComponentProps {
 
 const navLists = [
   {
-    header: 'Get TNBC',
+    header: 'Get LEAP',
     links: [
       ...(isFeatureEnabled(Feature.Bounties)
         ? [

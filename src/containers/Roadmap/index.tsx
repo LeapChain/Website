@@ -75,7 +75,7 @@ const Roadmap: React.FC = () => {
 
         <Section title="NFT Marketplace">
           <S.Paragraph>
-            NFT Marketplace (integration / app) is where people will use TNBC or other crypto to buy and sell NFTs
+            NFT Marketplace (integration / app) is where people will use LEAP or other crypto to buy and sell NFTs
             (in-game assets, artwork, videos, music, etc). The NFT Marketplace will interconnect various in-app assets
             into a one-stop-shop, which will then interconnect different types of user bases. While this app is outside
             of the core team's scope, we encourage community members to take on the responsibility of developing it to
@@ -85,7 +85,7 @@ const Roadmap: React.FC = () => {
 
         <Section title="Bridges">
           <S.Paragraph>
-            Bridges enable users to swap their TNBC for other crypto and vice versa easily with no middleman. Users will
+            Bridges enable users to swap their LEAP for other crypto and vice versa easily with no middleman. Users will
             find others instantly to perform these transactions through this service. We expect Bridges to become a
             popular service for all users globally and we're going to be bridging blockchains one bridge at a time. This
             way, we expect to attract the attention of more crypto enthusiasts and attract talent, which will also bring

@@ -20,7 +20,7 @@ const AboutUsValue: FC = () => {
     <S.Container>
       <S.Wrapper>
         <S.Image
-          alt="Illustration about TNBC's Values"
+          alt="Illustration about LEAP's Values"
           height={iconSize.height}
           placeholderSrc={ValuesIllustrationPlaceholder}
           realSrc={ValuesIllustration}

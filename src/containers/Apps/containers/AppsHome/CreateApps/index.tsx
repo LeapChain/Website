@@ -16,7 +16,7 @@ const CreateApps = () => {
         <S.Heading>Want to create an app?</S.Heading>
         <S.Paragraph>
           Learn to develop fully functional apps with tutorials created by thenewboston YouTube channel. You will
-          receive step-by-step procedures to build apps and integrate TNBC, and gain access to pre-built libraries to
+          receive step-by-step procedures to build apps and integrate LEAP, and gain access to pre-built libraries to
           support multiple programming languages!
         </S.Paragraph>
         <Button variant="contained" color="quaternary" onClick={handleClick}>

@@ -7,19 +7,19 @@ import CodeSnippet from '.';
 
 const BashSampleCode = `
 #!/bin/bash
-echo "Hello from TNBC!"
+echo "Hello from LEAP!"
 `;
 
 const JSONSampleCode = `
 #!/bin/bash
-echo "Hello from TNBC!"
+echo "Hello from LEAP!"
 `;
 
 describe('CodeSnippet component', () => {
   test('renders with CodeSample', () => {
     render(<CodeSnippet code={BashSampleCode} />);
     expect(screen.getByText('#!/bin/bash')).toBeTruthy();
-    expect(screen.queryByText('"Hello from TNBC!"')).toBeTruthy();
+    expect(screen.queryByText('"Hello from LEAP!"')).toBeTruthy();
   });
 
   test('renders code language-bash', () => {

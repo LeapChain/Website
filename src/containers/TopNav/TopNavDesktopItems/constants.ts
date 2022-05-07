@@ -81,7 +81,7 @@ export const developerPopoverItems: TopNavPopoverItemType[] = [
     : []),
 ];
 
-export const getTNBCPopoverItems: TopNavPopoverItemType[] = [
+export const getLEAPPopoverItems: TopNavPopoverItemType[] = [
   ...(isFeatureEnabled(Feature.Bounties)
     ? [
         {
