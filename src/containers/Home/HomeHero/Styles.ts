@@ -24,6 +24,8 @@ export const Container = styled(SharedContainer)`
   align-items: center;
   display: flex;
   flex-direction: column;
+  height: calc(100vh - 60px);
+  justify-content: center;
   padding: 120px 0 80px;
 
   @media (max-width: 1366px) {
@@ -57,7 +59,7 @@ type HeadingSegmentProps = {
 };
 
 export const HeadingSegment = styled.span<HeadingSegmentProps>`
-  ${(props) => props.highlighted && 'color: #0085FF;'}
+  ${(props) => props.highlighted && `color: ${colors.primary};`}
   transition: color 0.3s linear;
 `;
 

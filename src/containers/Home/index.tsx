@@ -12,10 +12,14 @@ const Home: FC = () => (
   <>
     <PageTitle title="Home" />
     <HomeHero />
-    {isFeatureEnabled(Feature.Tutorials) && <LearnToDevelop />}
-    <HomeSpeed />
-    {isFeatureEnabled(Feature.DownloadWallet) && <DownloadWallet />}
-    <Links />
+    {!isFeatureEnabled(Feature.HomePageUnderDevelopment) && (
+      <>
+        {isFeatureEnabled(Feature.Tutorials) && <LearnToDevelop />}
+        <HomeSpeed />
+        {isFeatureEnabled(Feature.DownloadWallet) && <DownloadWallet />}
+        <Links />
+      </>
+    )}
   </>
 );
 

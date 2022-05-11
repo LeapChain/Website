@@ -13,8 +13,3 @@ export const LinkContainer = styled(NavLink)`
     margin-left: 12px;
   }
 `;
-
-export const Image = styled.img`
-  height: 30px;
-  margin-right: 6px;
-`;

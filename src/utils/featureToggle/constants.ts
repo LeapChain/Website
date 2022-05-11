@@ -1,4 +1,5 @@
 export enum Feature {
+  // Legacy TNBC Feature toggles
   Bounties = 'Bounties',
   Careers = 'Careers',
   Faucet = 'Faucet',
@@ -28,6 +29,11 @@ export enum Feature {
 
   DownloadWallet = 'DownloadWallet',
   WalletDocs = 'WalletDocs',
+
+  // Leap specific feature toggles
+  Polls = 'Polls',
+  ConnectWallet = 'ConnectWallet',
+  HomePageUnderDevelopment = 'HomePageUnderDevelopment',
 }
 
 export const FEATURE_TOGGLES: Partial<Record<Feature, boolean>> = {
@@ -64,4 +70,8 @@ export const FEATURE_TOGGLES: Partial<Record<Feature, boolean>> = {
 
   [Feature.DownloadWallet]: true,
   [Feature.WalletDocs]: true,
+
+  [Feature.Polls]: false, // enable when polls page is ready
+  [Feature.ConnectWallet]: true, // enable when wallet connection is ready
+  [Feature.HomePageUnderDevelopment]: true,
 };

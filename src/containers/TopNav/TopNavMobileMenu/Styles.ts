@@ -1,11 +1,9 @@
 import styled, {css, keyframes} from 'styled-components';
 
-import {Icon} from '@leapchain/ui';
 import {Link} from 'react-router-dom';
 import {A, Button} from 'components';
 import {NAVBAR_HEIGHT} from 'constants/offsets';
 import colors from 'styles/colors';
-import {fontWeightBold} from 'styles/fonts/fontWeights';
 import zIndex from 'styles/zIndex';
 
 const mobileDropdownHeight = '1000px';
@@ -42,6 +40,7 @@ export const MenuButton = styled.button`
   align-items: center;
   background: transparent;
   border: none;
+  color: white;
   display: flex;
   height: ${NAVBAR_HEIGHT}px;
   justify-content: center;
@@ -59,15 +58,12 @@ export const MenuButton = styled.button`
 `;
 
 const linkStyles = css`
-  background: ${colors.white};
   border: none;
-  color: ${colors.primary};
+  color: ${colors.white};
   display: block;
   line-height: 1;
-  margin-bottom: 8px;
-  padding: 0;
+  padding: 20px;
 
-  padding-bottom: 16px;
   text-align: unset;
   width: fit-content;
 
@@ -101,7 +97,7 @@ export const Overlay = styled.div`
 
 export const DropdownContainer = styled.div`
   animation: ${mobileSlideDownAnimation} 0.3s forwards;
-  background: ${colors.white};
+  background: #0b0b0b;
   border-radius: 0 0 25px 25px;
   box-shadow: 0 6px 6px rgba(4, 34, 53, 0.3);
   display: block;
@@ -125,16 +121,6 @@ export const ButtonsContainer = styled.div`
   }
 `;
 
-export const AppButton = styled(Button)`
-  align-items: center;
-  display: flex;
-  justify-content: center;
-
-  @media (max-width: 414px) {
-    width: 100%;
-  }
-`;
-
 export const DownloadButton = styled(Button)`
   margin-right: 16px;
 
@@ -143,83 +129,4 @@ export const DownloadButton = styled(Button)`
     margin-right: 0;
     width: 100%;
   }
-`;
-
-export const DiscordButton = styled.button`
-  align-items: center;
-  background-color: transparent;
-  border: 0;
-  color: ${colors.discord};
-  cursor: pointer;
-  display: flex;
-  margin-right: 16px;
-  min-width: 100px;
-  outline: none;
-
-  &:hover {
-    color: ${colors.discordHover};
-    ${fontWeightBold};
-  }
-
-  @media (max-width: 414px) {
-    margin-bottom: 16px;
-    margin-right: 0;
-  }
-`;
-
-export const LinkSection = styled.div`
-  &:not(:last-child) {
-    border-bottom: 1px solid ${colors.palette.gray['100']};
-    margin-bottom: 16px;
-  }
-`;
-
-export const LinkSectionTitleButton = styled.button`
-  align-items: center;
-  background: transparent;
-  border: none;
-  cursor: default;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 16px;
-  padding: unset;
-  width: 100%;
-
-  @media (max-width: 768px) {
-    cursor: pointer;
-    margin-bottom: 14px;
-  }
-`;
-
-export const LinkSectionTitle = styled.span<{isOpened?: boolean}>`
-  background-color: transparent;
-  border: 0;
-  color: ${colors.palette.neutral['800']};
-  cursor: pointer;
-  outline: none;
-  padding: 0;
-  text-align: start;
-
-  ${(props) =>
-    props.isOpened &&
-    css`
-      color: ${colors.palette.neutral['900']};
-      ${fontWeightBold};
-    `}
-`;
-
-export const ListOfLinks = styled.div`
-  margin-bottom: 16px;
-  margin-left: 16px;
-`;
-
-export const DropdownIcon = styled(Icon)<{isOpened?: boolean}>`
-  color: ${colors.palette.neutral['800']};
-  transition: transform 0.3s ease-in-out;
-
-  ${(props) =>
-    props.isOpened &&
-    css`
-      transform: rotateX(180deg) translateZ(-1px);
-    `}
 `;

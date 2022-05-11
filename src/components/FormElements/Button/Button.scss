@@ -22,8 +22,8 @@
     color: var(--color-white);
 
     &#{$self}--primary {
-      background: var(--color-primary);
-      border-color: var(--color-primary);
+      background: #01a7e1;
+      border-color: #01a7e1;
 
       &:hover {
         background: var(--color-white);

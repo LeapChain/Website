@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
-import {Avatar, Button} from 'components';
+import {Link as ReactRouterLink} from 'react-router-dom';
+import {A} from 'components';
 import colors from 'styles/colors';
-import {fontWeightBold} from 'styles/fonts/fontWeights';
+import {h4} from 'styles/fonts';
 
 export const Separator = styled.div`
   background-color: ${colors.palette.gray['200']};
@@ -16,41 +17,6 @@ export const RightSection = styled.div`
   margin-left: 24px;
 `;
 
-export const AppButton = styled(Button)`
-  align-items: center;
-  display: flex;
-  margin-right: 16px;
-`;
-
-export const DownloadButton = styled(Button)`
-  margin-right: 16px;
-`;
-
-export const DiscordButton = styled.button`
-  align-items: center;
-  background-color: transparent;
-  border: 0;
-  color: ${colors.discord};
-  cursor: pointer;
-  display: flex;
-  margin-right: 16px;
-  min-width: 100px;
-  outline: none;
-
-  &:hover {
-    color: ${colors.discordHover};
-    ${fontWeightBold};
-  }
-`;
-
-export const ProfileImage = styled(Avatar)`
-  border-radius: 50%;
-  height: auto;
-  margin-left: 12px;
-  margin-right: 24px;
-  width: 36px;
-`;
-
 export const Container = styled.div`
   align-items: center;
   display: flex;
@@ -58,4 +24,16 @@ export const Container = styled.div`
   @media (max-width: 1366px) {
     display: none;
   }
+`;
+
+export const InternalLink = styled(ReactRouterLink)`
+  ${h4.regular};
+  color: ${colors.white};
+  text-transform: capitalize;
+`;
+
+export const ExternalLink = styled(A)`
+  ${h4.regular};
+  color: ${colors.white};
+  text-transform: capitalize;
 `;

@@ -7,17 +7,15 @@ import zIndex from 'styles/zIndex';
 const transitionBackground = keyframes`
   from {
     backdrop-filter: saturate(180%) blur(20px);
-    background: rgba(255, 255, 255, 0.8);
   }
   to {
     backdrop-filter: unset;
-    background: white;
   }
 `;
 
 export const Wrapper = styled.div<{isOpened?: boolean}>`
   backdrop-filter: saturate(180%) blur(20px);
-  background: rgba(255, 255, 255, 0.8);
+  background: #0b0b0b;
 
   ${(props) =>
     props.isOpened &&
