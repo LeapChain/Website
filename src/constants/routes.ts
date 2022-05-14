@@ -14,6 +14,7 @@ export const ROUTES = {
   faq: '/faq',
   guidelines: '/guidelines',
   openings: '/openings',
+  polls: '/polls',
   privacyPolicy: '/privacy-policy',
   roadmap: '/roadmap',
   signin: 'sign-in',

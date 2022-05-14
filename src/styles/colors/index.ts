@@ -8,7 +8,7 @@ const colors = {
   secondary: '#556cd6',
   tertiary: '#1ea672',
   quaternary: '#0085ff',
-  primary: '#2c3967',
+  primary: '#01A7E1',
   progressBar: '#17cead',
   white: '#fff',
   alert: '#ed5f74',

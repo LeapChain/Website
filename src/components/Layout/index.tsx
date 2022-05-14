@@ -4,6 +4,7 @@ import {useLocation} from 'react-router-dom';
 import {GoToTop} from 'components';
 import Footer from 'containers/Footer';
 import {SFC} from 'types/generic';
+import {isFeatureEnabled, Feature} from 'utils/featureToggle';
 
 import * as S from './Styles';
 
@@ -28,12 +29,15 @@ const Layout: SFC = ({children}) => {
         <S.LayoutTopNav />
       </S.LayoutTopNavWrapper>
       <S.LayoutContent data-testid="Layout__content">{children}</S.LayoutContent>
-      <S.LayoutFooterWrapper>
-        <GoToTop />
-        <S.LayoutFooter>
-          <Footer />
-        </S.LayoutFooter>
-      </S.LayoutFooterWrapper>
+
+      {!isFeatureEnabled(Feature.HomePageUnderDevelopment) && (
+        <S.LayoutFooterWrapper>
+          <GoToTop />
+          <S.LayoutFooter>
+            <Footer />
+          </S.LayoutFooter>
+        </S.LayoutFooterWrapper>
+      )}
     </S.Layout>
   );
 };
