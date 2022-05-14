@@ -6,6 +6,10 @@ import {b1, h2} from 'styles/fonts';
 export const Container = styled.div`
   margin: 0 auto;
   max-width: 600px;
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
 `;
 
 export const BackToPrevious = styled.div`

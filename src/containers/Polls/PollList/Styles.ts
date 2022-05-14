@@ -8,6 +8,10 @@ import Card from '../components/PollCard';
 export const Container = styled.div`
   margin: 0 auto;
   max-width: 600px;
+
+  @media (max-width: 768px) {
+    padding: 0 20px;
+  }
 `;
 
 export const Title = styled.div`
@@ -20,5 +24,9 @@ export const Title = styled.div`
 export const PollCard = styled(Card)`
   &:not(:last-child) {
     margin-bottom: 12px;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
   }
 `;
