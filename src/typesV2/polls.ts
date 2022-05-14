@@ -1,3 +1,9 @@
+export enum PollStatus {
+  InProgress = 0,
+  Completed = 1,
+  Cancelled = 2,
+}
+
 export type Poll = {
   _id: string;
   accountNumber: string;
@@ -7,4 +13,7 @@ export type Poll = {
   url: string;
   choices: {title: string; _id: string}[];
   __v: number;
+  createdAt: string;
+  updatedAt: string;
+  status: PollStatus;
 };

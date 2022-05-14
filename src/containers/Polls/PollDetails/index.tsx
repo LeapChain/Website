@@ -2,6 +2,8 @@ import React from 'react';
 import {useHistory} from 'react-router-dom';
 
 import {ROUTES} from 'constants/routes';
+import formatDistanceToNow from 'date-fns/formatDistanceToNow';
+import parseISO from 'date-fns/parseISO';
 import {Poll} from 'typesV2/polls';
 
 import PollDurationAndVotes from '../components/PollDurationAndVotes';
@@ -32,8 +34,7 @@ export default function PollDetails({poll}: Props) {
                 {choice.title}
               </S.PollChoice>
             ))}
-            {/* TODO: add accordingly when ready */}
-            <PollDurationAndVotes duration="1 hours ago" numVotes={12} />
+            <PollDurationAndVotes duration={`${formatDistanceToNow(parseISO(poll.createdAt))} ago`} numVotes={12} />
           </>
         ) : (
           <>Invalid Poll.</>

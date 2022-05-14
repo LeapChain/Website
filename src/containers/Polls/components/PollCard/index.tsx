@@ -1,5 +1,7 @@
 import React from 'react';
 
+import formatDistanceToNow from 'date-fns/formatDistanceToNow';
+import parseISO from 'date-fns/parseISO';
 import {Poll} from 'typesV2/polls';
 import PollDurationAndVotes from '../PollDurationAndVotes';
 
@@ -15,8 +17,7 @@ export default function PollCard({className, poll, onClick}: Props) {
   return (
     <S.Container className={className} onClick={onClick}>
       <S.Title>{poll.title}</S.Title>
-      {/* TODO: add accordingly when ready */}
-      <PollDurationAndVotes duration="1 hours ago" numVotes={12} />
+      <PollDurationAndVotes duration={`${formatDistanceToNow(parseISO(poll.createdAt))} ago`} numVotes={12} />
     </S.Container>
   );
 }

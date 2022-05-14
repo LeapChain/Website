@@ -21,6 +21,7 @@ export const BackToPrevious = styled.div`
 `;
 
 export const PollContainer = styled.div`
+  background-color: ${colors.white};
   box-shadow: 0px 0px 16px 0px #0b0b0b0a;
   color: ${colors.palette.neutral['900']};
   min-height: 380px;
@@ -46,5 +47,9 @@ export const PollChoice = styled.div`
 
   &:not(:last-child) {
     margin-bottom: 12px;
+  }
+
+  :hover {
+    background-color: ${colors.palette.gray['075']};
   }
 `;

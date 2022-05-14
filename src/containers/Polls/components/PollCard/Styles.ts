@@ -10,9 +10,14 @@ export const Title = styled.div`
 `;
 
 export const Container = styled.div`
+  background-color: ${colors.white};
   box-shadow: 0px 0px 16px 0px #0b0b0b0a;
   cursor: pointer;
   min-height: 141px;
   padding: 40px 50px;
   width: 600px;
+
+  :hover {
+    background-color: ${colors.palette.gray['050']};
+  }
 `;
