@@ -17,7 +17,10 @@ export default function PollCard({className, poll, onClick}: Props) {
   return (
     <S.Container className={className} onClick={onClick}>
       <S.Title>{poll.title}</S.Title>
-      <PollDurationAndVotes duration={`${formatDistanceToNow(parseISO(poll.createdAt))} ago`} numVotes={12} />
+      <PollDurationAndVotes
+        duration={`${formatDistanceToNow(parseISO(poll.createdAt))} ago`}
+        numVotes={poll.voteWeightage || 0}
+      />
     </S.Container>
   );
 }

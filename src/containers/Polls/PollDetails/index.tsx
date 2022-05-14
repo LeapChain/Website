@@ -34,7 +34,10 @@ export default function PollDetails({poll}: Props) {
                 {choice.title}
               </S.PollChoice>
             ))}
-            <PollDurationAndVotes duration={`${formatDistanceToNow(parseISO(poll.createdAt))} ago`} numVotes={12} />
+            <PollDurationAndVotes
+              duration={`${formatDistanceToNow(parseISO(poll.createdAt))} ago`}
+              numVotes={poll.voteWeightage || 0}
+            />
           </>
         ) : (
           <>Invalid Poll.</>

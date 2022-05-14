@@ -11,9 +11,10 @@ export type Poll = {
   title: string;
   description: string;
   url: string;
-  choices: {title: string; _id: string}[];
+  choices: {title: string; _id: string; totalVotes: number}[];
   __v: number;
   createdAt: string;
   updatedAt: string;
   status: PollStatus;
+  voteWeightage: number;
 };
