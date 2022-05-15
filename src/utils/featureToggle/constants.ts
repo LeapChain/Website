@@ -71,7 +71,7 @@ export const FEATURE_TOGGLES: Partial<Record<Feature, boolean>> = {
   [Feature.DownloadWallet]: true,
   [Feature.WalletDocs]: true,
 
-  [Feature.Polls]: false, // enable when polls page is ready
+  [Feature.Polls]: true,
   [Feature.ConnectWallet]: true, // enable when wallet connection is ready
   [Feature.HomePageUnderDevelopment]: true,
 };

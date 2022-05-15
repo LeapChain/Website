@@ -31,6 +31,7 @@ import {isFeatureEnabled, Feature} from '../utils/featureToggle';
  * Lazy load pages that may contribute a lot to the bundle sizes
  */
 const Apps = lazy(() => import('./Apps'));
+const Polls = lazy(() => import('./Polls'));
 const WalletProgress = lazy(() => import('./WalletProgress'));
 
 interface GoogleAnalyticsWindow extends Window {
@@ -103,6 +104,9 @@ const App: FC = () => {
           <Route path={ROUTES.privacyPolicy} component={PrivacyPolicy} />
           {isFeatureEnabled(Feature.Login) && <Route exact path={ROUTES.signin} component={SignIn} />}
           {isFeatureEnabled(Feature.Login) && <Route exact path={ROUTES.signout} component={SignOut} />}
+          {isFeatureEnabled(Feature.Polls) && (
+            <Route path={`${ROUTES.polls}/:pollId?`} component={withSuspense(Polls)} />
+          )}
           <Route exact path={ROUTES.termsOfUse} component={TermsOfUse} />
           {isFeatureEnabled(Feature.Profile) && <Route path={`${ROUTES.users}/:userId`} component={Profile} />}
           <Route path={ROUTES.walletProgress} component={withSuspense(WalletProgress)} />

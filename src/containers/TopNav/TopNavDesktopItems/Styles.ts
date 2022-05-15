@@ -30,10 +30,13 @@ export const InternalLink = styled(ReactRouterLink)`
   ${h4.regular};
   color: ${colors.white};
   text-transform: capitalize;
+  margin-right: 15px;
 `;
 
 export const ExternalLink = styled(A)`
   ${h4.regular};
+  align-items: center;
   color: ${colors.white};
+  display: flex;
   text-transform: capitalize;
 `;

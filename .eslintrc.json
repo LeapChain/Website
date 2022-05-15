@@ -65,6 +65,9 @@
     "react/prop-types": "off",
     "react/require-default-props": "off",
     "react/jsx-props-no-spreading": "off",
-    "sort-keys": "error"
+    "sort-keys": "error",
+    "react/self-closing-comp": "off",
+    "no-underscore-dangle": "off",
+    "@typescript-eslint/no-shadow": "off"
   }
 }
