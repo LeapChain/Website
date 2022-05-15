@@ -2,10 +2,10 @@ import {SocialMedia} from 'types/social-media';
 import {IconType} from '@leapchain/ui';
 
 export const socialMediaUrls = {
-  [SocialMedia.discord]: 'https://discord.gg/thenewboston',
+  [SocialMedia.discord]: 'https://discord.gg/WnDvJSGaTA',
   [SocialMedia.facebook]: 'https://www.facebook.com/thenewbostoncoin/',
   [SocialMedia.gaming]: 'https://discord.gg/PZu7MSBsn8',
-  [SocialMedia.github]: 'https://github.com/thenewboston-developers',
+  [SocialMedia.github]: 'https://github.com/LeapChain',
   [SocialMedia.instagram]: 'https://www.instagram.com/thenewbostoncoin/',
   [SocialMedia.linkedin]: 'https://www.linkedin.com/company/thenewbostoncoin/',
   [SocialMedia.pinterest]: 'https://www.pinterest.com/thenewbostoncoin/',
