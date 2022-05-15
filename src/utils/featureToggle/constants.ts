@@ -33,7 +33,6 @@ export enum Feature {
   // Leap specific feature toggles
   Polls = 'Polls',
   ConnectWallet = 'ConnectWallet',
-  HomePageUnderDevelopment = 'HomePageUnderDevelopment',
 }
 
 export const FEATURE_TOGGLES: Partial<Record<Feature, boolean>> = {
@@ -73,5 +72,4 @@ export const FEATURE_TOGGLES: Partial<Record<Feature, boolean>> = {
 
   [Feature.Polls]: true,
   [Feature.ConnectWallet]: true, // enable when wallet connection is ready
-  [Feature.HomePageUnderDevelopment]: true,
 };
