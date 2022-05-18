@@ -18,7 +18,7 @@ const DownloadWallet = () => {
           <S.Image alt="Wallet" src={WalletImage} />
         </S.ImageContainer>
         <S.Content>
-          <S.Heading>Get TNB Coins</S.Heading>
+          <S.Heading>Get LEAP Coins</S.Heading>
           <S.Paragraph>Download our desktop wallet to send and receive coins.</S.Paragraph>
           {isFeatureEnabled(Feature.Faucet) && <S.A href={URLS.tnbFaucet}>Get 50 free coins from the Faucet.</S.A>}
           <S.Button variant="outlined" onClick={() => history.push(ROUTES.download)}>
