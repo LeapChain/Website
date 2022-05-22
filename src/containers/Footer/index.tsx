@@ -240,6 +240,39 @@ const navLists = [
         ),
         url: socialMediaUrls[SocialMedia.github],
       },
+      {
+        isExternal: true,
+        newWindow: true,
+        title: (
+          <S.SocialMediaLink>
+            <S.SocialMediaIcon icon={socialMediaFooterIcons[SocialMedia.reddit]} size={20} totalSize={20} />
+            {SocialMedia.reddit}
+          </S.SocialMediaLink>
+        ),
+        url: socialMediaUrls[SocialMedia.reddit],
+      },
+      {
+        isExternal: true,
+        newWindow: true,
+        title: (
+          <S.SocialMediaLink>
+            <S.SocialMediaIcon icon={socialMediaFooterIcons[SocialMedia.twitter]} size={20} totalSize={20} />
+            {SocialMedia.twitter}
+          </S.SocialMediaLink>
+        ),
+        url: socialMediaUrls[SocialMedia.twitter],
+      },
+      {
+        isExternal: true,
+        newWindow: true,
+        title: (
+          <S.SocialMediaLink>
+            <S.SocialMediaIcon icon={socialMediaFooterIcons[SocialMedia.instagram]} size={20} totalSize={20} />
+            {SocialMedia.instagram}
+          </S.SocialMediaLink>
+        ),
+        url: socialMediaUrls[SocialMedia.instagram],
+      },
     ],
   },
   {
