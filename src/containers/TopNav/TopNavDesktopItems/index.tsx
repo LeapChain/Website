@@ -3,12 +3,17 @@ import React from 'react';
 import {Button} from 'components';
 import {URLS, ROUTES} from 'constants/routes';
 import {isFeatureEnabled, Feature} from 'utils/featureToggle';
+import {requestKeysignVerify} from 'utils/keysign';
 
 import * as S from './Styles';
 
 const TopNavDesktopItems = () => {
   const onClickConnectWallet = () => {
-    // TODO: link wallet accordingly when ready
+    requestKeysignVerify({
+      accountNumber: '',
+      onFailure: () => console.log('verify failure'), // TODO: handle accordingly
+      onSuccess: () => console.log('verify success'), // TODO: handle accordingly
+    });
   };
 
   return (
