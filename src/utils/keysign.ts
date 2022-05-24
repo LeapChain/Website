@@ -1,6 +1,6 @@
 // https://github.com/Keysign-Wallet/keysign/blob/master/DOCS.md#documentation
 // eslint-disable-next-line @typescript-eslint/no-namespace
-declare namespace tnb_keysign {
+declare namespace leap_keysign {
   function requestHandshake(callback: () => void): void;
   function requestTransfer(
     txs: {to: string; amount: number; memo: string}[],
@@ -27,7 +27,7 @@ declare namespace tnb_keysign {
 }
 
 export const isKeySignInstalled = () => {
-  if (tnb_keysign) {
+  if (leap_keysign) {
     return true;
   }
 
@@ -46,7 +46,7 @@ export const requestKeysignVerify = ({
   onSuccess: () => void;
 }) => {
   if (isKeySignInstalled()) {
-    tnb_keysign.requestVerify(
+    leap_keysign.requestVerify(
       accountNumber,
       (res) => {
         if (res.success) {
