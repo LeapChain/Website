@@ -3,30 +3,30 @@ import {IconType} from '@leapchain/ui';
 
 export const socialMediaUrls = {
   [SocialMedia.discord]: 'https://discord.gg/WnDvJSGaTA',
-  [SocialMedia.facebook]: 'https://www.facebook.com/thenewbostoncoin/',
+  [SocialMedia.facebook]: 'https://www.facebook.com/LeapChain/',
   [SocialMedia.gaming]: 'https://discord.gg/PZu7MSBsn8',
   [SocialMedia.github]: 'https://github.com/LeapChain',
-  [SocialMedia.instagram]: 'https://www.instagram.com/thenewbostoncoin/',
-  [SocialMedia.linkedin]: 'https://www.linkedin.com/company/thenewbostoncoin/',
-  [SocialMedia.pinterest]: 'https://www.pinterest.com/thenewbostoncoin/',
-  [SocialMedia.reddit]: 'https://www.reddit.com/r/thenewboston/',
-  [SocialMedia.twitch]: 'https://twitch.tv/thenewboston/profile',
-  [SocialMedia.twitter]: 'https://twitter.com/thenewboston_og',
-  [SocialMedia.youtube]: 'https://www.youtube.com/user/thenewboston',
+  [SocialMedia.instagram]: 'https://www.instagram.com/LeapChain/',
+  [SocialMedia.linkedin]: 'https://www.linkedin.com/company/LeapChain/',
+  [SocialMedia.pinterest]: 'https://www.pinterest.com/LeapChain/',
+  [SocialMedia.reddit]: 'https://www.reddit.com/r/LeapChain/',
+  [SocialMedia.twitch]: 'https://twitch.tv/leapchain/profile',
+  [SocialMedia.twitter]: 'https://twitter.com/LeapChain',
+  [SocialMedia.youtube]: 'https://www.youtube.com/user/leapchain',
 };
 
 export const socialMediaHandles = {
   [SocialMedia.discord]: 'discord',
-  [SocialMedia.facebook]: 'thenewbostoncoin',
-  [SocialMedia.github]: 'thenewboston-developers',
+  [SocialMedia.facebook]: 'LeapChain',
+  [SocialMedia.github]: 'LeapChain',
   [SocialMedia.gaming]: 'gaming',
-  [SocialMedia.instagram]: '@thenewbostoncoin',
-  [SocialMedia.linkedin]: 'thenewbostoncoin',
-  [SocialMedia.pinterest]: 'thenewbostoncoin',
-  [SocialMedia.reddit]: 'r/thenewboston',
-  [SocialMedia.twitch]: 'thenewboston',
-  [SocialMedia.twitter]: '@thenewboston_og',
-  [SocialMedia.youtube]: 'thenewboston',
+  [SocialMedia.instagram]: '@LeapChain',
+  [SocialMedia.linkedin]: 'LeapChain',
+  [SocialMedia.pinterest]: 'LeapChain',
+  [SocialMedia.reddit]: 'r/LeapChain',
+  [SocialMedia.twitch]: 'LeapChain',
+  [SocialMedia.twitter]: '@LeapChain',
+  [SocialMedia.youtube]: 'LeapChain',
 };
 
 export const socialMediaFooterIcons = {
