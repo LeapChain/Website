@@ -13,13 +13,18 @@ declare namespace leap_keysign {
     callback: (res: {
       success: boolean;
       error: string;
-      result: string | null;
       message: string;
+      request_id: number;
       data: {
-        request_id: number;
-        type: 'verify';
         accountNumber: string;
         code: string;
+        request_id: number;
+        result: {
+          accountNumber: string;
+          signature: string;
+          verified: boolean;
+        };
+        type: 'verify';
       };
     }) => void,
     code?: string,
@@ -57,6 +62,28 @@ export const requestKeysignVerify = ({
       },
       code,
     );
+  }
+
+  return onFailure();
+};
+
+export const requestAccountNumber = ({
+  accountNumber,
+  onFailure,
+  onSuccess,
+}: {
+  accountNumber: string;
+  onFailure: () => void;
+  onSuccess: (userAccountNumber: string) => void;
+}) => {
+  if (isKeySignInstalled()) {
+    leap_keysign.requestVerify(accountNumber, (res) => {
+      if (res.success) {
+        onSuccess(res.data.result.accountNumber);
+      } else {
+        onFailure();
+      }
+    });
   }
 
   return onFailure();

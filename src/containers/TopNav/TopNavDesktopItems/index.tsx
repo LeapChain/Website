@@ -3,16 +3,20 @@ import React from 'react';
 import {Button} from 'components';
 import {URLS, ROUTES} from 'constants/routes';
 import {isFeatureEnabled, Feature} from 'utils/featureToggle';
-import {requestKeysignVerify} from 'utils/keysign';
+import {requestAccountNumber} from 'utils/keysign';
+import * as api from 'apisV2/auth';
 
 import * as S from './Styles';
 
 const TopNavDesktopItems = () => {
   const onClickConnectWallet = () => {
-    requestKeysignVerify({
+    requestAccountNumber({
       accountNumber: '',
       onFailure: () => console.log('verify failure'), // TODO: handle accordingly
-      onSuccess: () => console.log('verify success'), // TODO: handle accordingly
+      onSuccess: async (userAccountNumber) => {
+        const user = await api.createUser({accountNumber: userAccountNumber});
+        console.log(user);
+      }, // TODO: ask the user to sign the nonce.
     });
   };
 
