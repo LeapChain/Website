@@ -7,3 +7,9 @@ export async function getPolls(): Promise<Poll[]> {
 
   return response.data;
 }
+
+export async function getPollbyID(id: string): Promise<Poll[]> {
+  const response = await axios.get<Poll[]>(`${process.env.REACT_APP_BACKEND_API}/api/v1/polls/${id}`);
+
+  return response.data;
+}
