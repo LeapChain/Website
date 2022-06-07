@@ -15,7 +15,7 @@ const TopNavDesktopItems = () => {
       onFailure: () => console.log('verify failure'), // TODO: handle accordingly
       onSuccess: async (userAccountNumber) => {
         const user = await api.createUser({accountNumber: userAccountNumber});
-        console.log(user);
+        // TODO: save user account number as cookie
       }, // TODO: ask the user to sign the nonce.
     });
   };

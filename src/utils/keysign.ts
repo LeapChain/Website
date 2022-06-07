@@ -48,14 +48,15 @@ export const requestKeysignVerify = ({
   accountNumber: string;
   code?: string;
   onFailure: () => void;
-  onSuccess: () => void;
+  onSuccess: (signature: string) => void;
 }) => {
   if (isKeySignInstalled()) {
+    console.log(code);
     leap_keysign.requestVerify(
       accountNumber,
       (res) => {
         if (res.success) {
-          onSuccess();
+          onSuccess(res.data.result.signature);
         } else {
           onFailure();
         }
