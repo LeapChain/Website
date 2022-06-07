@@ -21,7 +21,7 @@ declare namespace leap_keysign {
         request_id: number;
         result: {
           accountNumber: string;
-          signature: string;
+          sig: string;
           verified: boolean;
         };
         type: 'verify';
@@ -51,12 +51,11 @@ export const requestKeysignVerify = ({
   onSuccess: (signature: string) => void;
 }) => {
   if (isKeySignInstalled()) {
-    console.log(code);
     leap_keysign.requestVerify(
       accountNumber,
       (res) => {
         if (res.success) {
-          onSuccess(res.data.result.signature);
+          onSuccess(res.data.result.sig);
         } else {
           onFailure();
         }
