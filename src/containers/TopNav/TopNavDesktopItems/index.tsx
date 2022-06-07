@@ -5,6 +5,7 @@ import {URLS, ROUTES} from 'constants/routes';
 import {isFeatureEnabled, Feature} from 'utils/featureToggle';
 import {requestAccountNumber} from 'utils/keysign';
 import * as api from 'apisV2/auth';
+import {setLocalStorageItem} from 'utils/browser';
 
 import * as S from './Styles';
 
@@ -15,6 +16,7 @@ const TopNavDesktopItems = () => {
       onFailure: () => console.log('verify failure'), // TODO: handle accordingly
       onSuccess: async (userAccountNumber) => {
         const user = await api.createUser({accountNumber: userAccountNumber});
+        setLocalStorageItem('accountNumber', JSON.stringify(user.accountNumber));
         console.log(user);
         // TODO: save user account number as cookie
       }, // TODO: ask the user to sign the nonce.

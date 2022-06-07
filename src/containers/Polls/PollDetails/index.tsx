@@ -8,6 +8,7 @@ import {Poll} from 'typesV2/polls';
 import {requestKeysignVerify} from 'utils/keysign';
 import {createUser} from 'apisV2/auth/index';
 import {createVote} from 'apisV2/votes/index';
+import {getLocalStorageItem} from 'utils/browser';
 
 import PollDurationAndVotes from '../components/PollDurationAndVotes';
 
@@ -63,7 +64,11 @@ export default function PollDetails({poll}: Props) {
                 onClick={() =>
                   requestSignatureForVote(
                     // TODO: use cookie to get the user account number
-                    '4d6f93dd06f38ccc16a84fb9c988122473c3ce5a029e2b15faac508b944d0950',
+                    // '4d6f93dd06f38ccc16a84fb9c988122473c3ce5a029e2b15faac508b944d0950',
+                    getLocalStorageItem(
+                      'accountNumber',
+                      '0000000000000000000000000000000000000000000000000000000000000000',
+                    ),
                     choice._id,
                     poll._id,
                   )
