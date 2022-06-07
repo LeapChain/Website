@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 // TODO: add apis accordingly
-export async function createUser() {
-  const response = await axios.post(`${process.env.REACT_APP_BACKEND_API}/api/v1`);
+export async function createUser({accountNumber}: {accountNumber: string}) {
+  const response = await axios.post(`${process.env.REACT_APP_BACKEND_API}/api/v1/users/create`, {accountNumber});
 
   return response.data;
 }
