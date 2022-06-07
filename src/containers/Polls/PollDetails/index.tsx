@@ -38,7 +38,7 @@ export default function PollDetails({poll}: Props) {
     const stringifiedMessage = JSON.stringify(message);
 
     requestKeysignVerify({
-      accountNumber: '', // TODO: use the account number passed in the function once keysign is working
+      accountNumber,
       code: stringifiedMessage,
       onFailure: () => console.log('verify failure'), // TODO: handle accordingly
       onSuccess: async (signature) => {
