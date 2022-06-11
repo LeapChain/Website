@@ -22,6 +22,10 @@ export default function PollDetails({poll}: Props) {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const history = useHistory();
 
+  const calculateVotePercentage = (votes: number, totalVotes: number) => {
+    return (votes / totalVotes) * 100;
+  };
+
   const requestSignatureForVote = async (accountNumber: string, choices: string, poll: string) => {
     setIsLoading(true);
     const user = await createUser({accountNumber});
@@ -74,7 +78,7 @@ export default function PollDetails({poll}: Props) {
                   )
                 }
               >
-                {choice.title}
+                {choice.title} | {calculateVotePercentage(choice.totalVotes, poll.voteWeightage)}%
               </S.PollChoice>
             ))}
             <PollDurationAndVotes
