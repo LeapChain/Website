@@ -29,13 +29,13 @@ export const ROUTES = {
 };
 
 // External URLs
-const developerPortalUrl = 'https://developer.thenewboston.com'; // TODO: update when ready
+const developerPortalUrl = 'https://developer.theleapchain.com'; // TODO: update when ready
 
 export const URLS = {
   apps: {
     faucet: 'https://tnbfaucet.com/', // TODO: update when ready
   },
-  blog: 'https://blog.thenewboston.com', // TODO: update when ready
+  blog: 'https://blog.theleapchain.com', // TODO: update when ready
   contact: `mailto:${EMAIL}`,
   developerPortal: {
     api: `${developerPortalUrl}/api`,

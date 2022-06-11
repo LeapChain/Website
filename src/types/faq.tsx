@@ -310,7 +310,7 @@ export const faqQuestionsAndAnswers: TopicQuestionAndAnswers[] = [
         answer: (
           <span>
             Check out our{' '}
-            <A newWindow href="https://blog.thenewboston.com/category/crypto-101-series/">
+            <A newWindow href="https://blog.theleapchain.com/category/crypto-101-series/">
               Crypto 101 series in our blog
             </A>{' '}
             and{' '}

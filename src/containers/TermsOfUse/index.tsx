@@ -12,8 +12,8 @@ const TermsOfUse: FC = () => {
       <h1 className="TermsOfUse__heading">Terms of Use</h1>
       <div className="TermsOfUse__main-text">
         <p className="TermsOfUse__text">
-          This website (the “Site”) is operated by thenewboston (“we”, “us”, “our”). To contact us, please email
-          contact@thenewboston.com.
+          This website (the “Site”) is operated by LeapChain (“we”, “us”, “our”). To contact us, please email
+          contact@theleapchain.com.
         </p>
         <p className="TermsOfUse__text">
           By using our Site, you confirm that you accept these Terms of Use (“Terms”) and you agree to comply with them.
@@ -84,7 +84,7 @@ const TermsOfUse: FC = () => {
           The “Resources” section of our Site provides various assets and resources that you may use, subject to any
           restrictions specified for each asset. Except for the Media Assets provided in the Assets section, you must
           not use any part of the content on our Site for commercial purposes without obtaining a licence to do so from
-          us or our licensors via contact@thenewboston.com.
+          us or our licensors via contact@theleapchain.com.
         </p>
       </section>
       <section className="TermsOfUse__section">

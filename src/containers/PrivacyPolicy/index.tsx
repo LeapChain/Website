@@ -13,7 +13,7 @@ const PrivacyPolicy: FC = () => {
       <div className="PrivacyPolicy__main-text">
         <p className="PrivacyPolicy__text">
           This Privacy Policy governs the manner in which thenewboston collects, uses, maintains, and discloses
-          information collected from users (each, a "User" or "you") on the www.thenewboston.com website and all
+          information collected from users (each, a "User" or "you") on the www.theleapchain.com website and all
           products and services offered by thenewboston ("Site").
         </p>
         <p className="PrivacyPolicy__text">
@@ -203,7 +203,7 @@ const PrivacyPolicy: FC = () => {
           with this Site, please contact us at:
         </p>
         <A className="PrivacyPolicy__email" href="https://github.com/LeapChain/Website/issues" newWindow={false}>
-          contact@thenewboston.com
+          contact@theleapchain.com
         </A>
         <p className="PrivacyPolicy__text">
           We welcome your questions, comments, and feedback, and will take steps to respond to you as soon as reasonably

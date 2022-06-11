@@ -28,8 +28,8 @@ It is strictly advised to **create a single PR per issue**. In any case, where t
 
 Also, while working make sure you follow these guidelines:
 
-- [React / JSX Style Guide](https://thenewboston.com/style-guide/react)
-- [CSS / SASS Style Guide](https://thenewboston.com/style-guide/css)
+- [React / JSX Style Guide](https://theleapchain.com/style-guide/react)
+- [CSS / SASS Style Guide](https://theleapchain.com/style-guide/css)
 
 Next steps:
 
@@ -40,7 +40,7 @@ Next steps:
 5. Push to the branch
 6. Open a pull request
 
-For further help, you can check out the [FAQs](https://thenewboston.com/faq).
+For further help, you can check out the [FAQs](https://theleapchain.com/faq).
 
 Finally, feel free to shoot any queries or suggestions. Don't hesitate. ;)
 

@@ -14,9 +14,9 @@ export interface PageTitleProps {
 export const defaultOg = {
   description:
     'Learn to code, collaborate on projects, gain experience, build a community, and earn coins by contributing.',
-  imageUrl: 'https://www.thenewboston.com/logo192.png',
+  imageUrl: 'https://www.theleapchain.com/logo192.png',
   type: 'website',
-  url: 'https://www.thenewboston.com/',
+  url: 'https://www.theleapchain.com/',
 };
 
 const PageTitle: SFC<PageTitleProps> = ({

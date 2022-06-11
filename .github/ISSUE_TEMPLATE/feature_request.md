@@ -27,4 +27,4 @@ You might want to link to related issues here, if you haven't already.
 **Account Number**
 Your account number where the reward coins for this feature request will be sent (pending review and approval).
 
-[How to Create an Account](https://thenewboston.com/wallet/create-an-account)
+[How to Create an Account](https://theleapchain.com/wallet/create-an-account)
