@@ -51,7 +51,7 @@ export const fetchGithubReleases = async (queryParams: FetchGithubReleasesParams
 };
 
 const getRepositoryName = (repositoryUrl: string) => {
-  return repositoryUrl.replace('https://api.github.com/repos/thenewboston-developers/', '');
+  return repositoryUrl.replace('https://api.github.com/repos/LeapChain/', '');
 };
 
 export const getRepositoryUrl = (repoName: string) => {

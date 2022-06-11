@@ -70,12 +70,10 @@ export enum Repository {
   accountManager = 'Account-Manager',
   bank = 'Bank',
   design = 'Design',
-  kotlinSdk = 'Kotlin-SDK',
   marketing = 'Marketing',
-  thenewbostonPython = 'thenewboston-python',
-  thenewbostonPythonclient = 'thenewboston-python-client',
-  thenewbostonJs = 'thenewboston-js',
-  validator = 'Validator',
+  dleap = 'DLEAP',
+  node = 'Node',
+  votingBot = 'Voting-Bot',
   website = 'Website',
 }
 
