@@ -1,1 +1,1 @@
-export const EMAIL = 'contact@thenewboston.com'; // TODO: update when ready
+export const EMAIL = 'contact@theleapchain.com'; // TODO: update when ready

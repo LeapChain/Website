@@ -202,7 +202,7 @@ const PrivacyPolicy: FC = () => {
           If you have any questions or concerns about this Privacy Policy, the practices of this Site, or your dealings
           with this Site, please contact us at:
         </p>
-        <A className="PrivacyPolicy__email" href="mailto:contact@thenewboston.com" newWindow={false}>
+        <A className="PrivacyPolicy__email" href="https://github.com/LeapChain/Website/issues" newWindow={false}>
           contact@thenewboston.com
         </A>
         <p className="PrivacyPolicy__text">
