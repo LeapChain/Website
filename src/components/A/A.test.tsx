@@ -16,7 +16,7 @@ describe('A component', () => {
   });
 
   test('expect to have proper href passed in', () => {
-    const link = 'https://thenewboston.com';
+    const link = 'https://theleapchain.com';
     render(<A href={link}>hello</A>);
     const el = screen.getByTestId('A');
 

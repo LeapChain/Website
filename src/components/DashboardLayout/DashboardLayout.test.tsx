@@ -29,7 +29,7 @@ describe('Dashboard Component', () => {
   test('expect to have proper page title passed in', async () => {
     render(<DashboardLayout {...baseProps} />, {wrapper: Wrapper});
 
-    await waitFor(() => expect(document.title).toEqual(`${baseProps.sectionName} | thenewboston`));
+    await waitFor(() => expect(document.title).toEqual(`${baseProps.sectionName} | LeapChain`));
   });
 
   test('expect to have breadcrumb menu hidden', () => {

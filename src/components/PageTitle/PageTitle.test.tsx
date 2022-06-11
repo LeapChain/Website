@@ -13,7 +13,7 @@ describe('Page Title component', () => {
       </HelmetProvider>,
     );
 
-    await waitFor(() => expect(document.title).toContain('Test | thenewboston'));
+    await waitFor(() => expect(document.title).toContain('Test | LeapChain'));
   });
 
   it('renders with default og meta tags', async () => {
@@ -24,9 +24,9 @@ describe('Page Title component', () => {
     );
 
     await waitFor(() => {
-      expect(document.title).toContain('Home | thenewboston');
+      expect(document.title).toContain('Home | LeapChain');
       expect((document.querySelector('[property="og:type"]') as HTMLMetaElement).content).toBe(defaultOg.type);
-      expect((document.querySelector('[property="og:title"]') as HTMLMetaElement).content).toBe('Home | thenewboston');
+      expect((document.querySelector('[property="og:title"]') as HTMLMetaElement).content).toBe('Home | LeapChain');
       expect((document.querySelector('[property="og:description"]') as HTMLMetaElement).content).toBe(
         defaultOg.description,
       );

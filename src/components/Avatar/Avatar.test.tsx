@@ -7,7 +7,7 @@ import Avatar, {AvatarProps, getFormattedSrc, getImageSizeBasedOnDeviceRatio} fr
 describe('Avatar component', () => {
   const baseProps: AvatarProps = {
     size: 60,
-    src: 'https://thenewboston.com',
+    src: 'https://theleapchain.com',
   };
 
   afterEach(() => {

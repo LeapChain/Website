@@ -27,7 +27,7 @@ const PageTitle: SFC<PageTitleProps> = ({
   ogUrl = defaultOg.url,
   title,
 }) => {
-  const titleToUse = `${title} | thenewboston`;
+  const titleToUse = `${title} | LeapChain`;
   const ogTitleToUse = ogTitle || titleToUse;
   return (
     <Helmet>
