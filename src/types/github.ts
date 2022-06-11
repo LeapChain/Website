@@ -74,6 +74,7 @@ export enum Repository {
   dleap = 'DLEAP',
   node = 'Node',
   votingBot = 'Voting-Bot',
+  votingBackend = 'Voting-Backend',
   website = 'Website',
 }
 

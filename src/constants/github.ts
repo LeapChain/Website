@@ -8,6 +8,7 @@ export const REPOSITORIES: NavOption[] = [
   {pathname: Repository.design, title: 'Design'},
   {pathname: Repository.marketing, title: 'Marketing'},
   {pathname: Repository.votingBot, title: 'Voting-Bot'},
+  {pathname: Repository.votingBackend, title: 'Voting-Backend'},
   {pathname: Repository.dleap, title: 'DLEAP'},
   {pathname: Repository.node, title: 'Node'},
   {pathname: Repository.website, title: 'Website'},

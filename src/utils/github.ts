@@ -55,5 +55,5 @@ const getRepositoryName = (repositoryUrl: string) => {
 };
 
 export const getRepositoryUrl = (repoName: string) => {
-  return `https://github.com/thenewboston-developers/${repoName}`;
+  return `https://github.com/LeapChain/${repoName}`;
 };
