@@ -9,6 +9,7 @@ import {requestKeysignVerify} from 'utils/keysign';
 import {createUser} from 'apisV2/auth/index';
 import {createVote} from 'apisV2/votes/index';
 import {getLocalStorageItem} from 'utils/browser';
+import {displayToast} from 'utils/toast';
 
 import PollDurationAndVotes from '../components/PollDurationAndVotes';
 
@@ -47,7 +48,7 @@ export default function PollDetails({poll}: Props) {
       onFailure: () => console.log('verify failure'), // TODO: handle accordingly
       onSuccess: async (signature) => {
         const vote = await createVote({accountNumber, choices, nonce, poll, signature});
-        console.log(vote);
+        displayToast('Yaay, you just voted...', 'success');
         // TODO: handle the success and failure scenerios accordingly
       },
     });
