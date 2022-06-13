@@ -68,10 +68,8 @@ export default function PollDetails({poll}: Props) {
                 key={choice._id}
                 onClick={() =>
                   requestSignatureForVote(
-                    // TODO: use cookie to get the user account number
-                    // '4d6f93dd06f38ccc16a84fb9c988122473c3ce5a029e2b15faac508b944d0950',
                     getLocalStorageItem(
-                      'accountNumber',
+                      '__user_id',
                       '0000000000000000000000000000000000000000000000000000000000000000',
                     ),
                     choice._id,

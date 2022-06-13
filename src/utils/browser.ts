@@ -14,3 +14,7 @@ export const saveETagToLocalStorage = (key: string, eTag: string) => {
   const parsedETag = eTag.replace('W/', ''); // get <etag_value> from eTag
   setLocalStorageItem(key, parsedETag);
 };
+
+export const removeLocalStorageItem = (key: string) => {
+  localStorage.removeItem(key);
+};
