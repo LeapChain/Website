@@ -55,6 +55,10 @@ export default function PollDetails({poll}: Props) {
     setIsLoading(false);
   };
 
+  const handleVisitWebsite = (pollDetailsUrl: string): void => {
+    window.open(pollDetailsUrl, '_blank', 'noopener noreferrer');
+  };
+
   return (
     <S.Container>
       <S.BackToPrevious onClick={() => history.push(ROUTES.polls)}>{'<'} Back to Polls</S.BackToPrevious>
@@ -63,6 +67,15 @@ export default function PollDetails({poll}: Props) {
           <>
             <S.PollTitle>{poll.title}</S.PollTitle>
             <S.PollDescription>{poll.description}</S.PollDescription>
+            {poll.url ? (
+              <>
+                <S.PollDescription role="button" onClick={() => handleVisitWebsite(poll.url)} tabIndex={0}>
+                  More Information: <S.PollUrl>{poll.url}</S.PollUrl>
+                </S.PollDescription>
+              </>
+            ) : (
+              <>No Extra Information for the poll provided.</>
+            )}
             {poll.choices.map((choice) => (
               <S.PollChoice
                 key={choice._id}
