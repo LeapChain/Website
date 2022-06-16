@@ -55,6 +55,10 @@ export default function PollDetails({poll}: Props) {
     setIsLoading(false);
   };
 
+  const handleVisitWebsite = (pollDetailsUrl: string): void => {
+    window.open(pollDetailsUrl, '_blank', 'noopener noreferrer');
+  };
+
   return (
     <S.Container>
       <S.BackToPrevious onClick={() => history.push(ROUTES.polls)}>{'<'} Back to Polls</S.BackToPrevious>
@@ -63,15 +67,22 @@ export default function PollDetails({poll}: Props) {
           <>
             <S.PollTitle>{poll.title}</S.PollTitle>
             <S.PollDescription>{poll.description}</S.PollDescription>
+            {poll.url ? (
+              <>
+                <S.PollDescription role="button" onClick={() => handleVisitWebsite(poll.url)} tabIndex={0}>
+                  More Information: <S.PollUrl>{poll.url}</S.PollUrl>
+                </S.PollDescription>
+              </>
+            ) : (
+              <>No Extra Information for the poll provided.</>
+            )}
             {poll.choices.map((choice) => (
               <S.PollChoice
                 key={choice._id}
                 onClick={() =>
                   requestSignatureForVote(
-                    // TODO: use cookie to get the user account number
-                    // '4d6f93dd06f38ccc16a84fb9c988122473c3ce5a029e2b15faac508b944d0950',
                     getLocalStorageItem(
-                      'accountNumber',
+                      '__user_id',
                       '0000000000000000000000000000000000000000000000000000000000000000',
                     ),
                     choice._id,

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import colors from 'styles/colors';
 import {b1, h2} from 'styles/fonts';
+import {fontWeightBold} from 'styles/fonts/fontWeights';
 
 export const Container = styled.div`
   margin: 0 auto;
@@ -36,6 +37,16 @@ export const PollTitle = styled.div`
 export const PollDescription = styled.div`
   ${b1.regular};
   margin-bottom: 16px;
+`;
+
+export const PollUrl = styled.span`
+  color: ${colors.palette.blue['500']};
+  cursor: pointer;
+
+  &:hover {
+    color: ${colors.palette.blue['500']};
+    ${fontWeightBold};
+  }
 `;
 
 export const PollChoice = styled.div`
