@@ -9,7 +9,7 @@ interface ComponentProps {
   team: CoreTeam;
 }
 
-const githubTeamName = 'thenewboston-developers/';
+const githubTeamName = 'LeapChain/';
 
 const TeamOverview: FC<ComponentProps> = ({team}) => {
   const renderTeamDescription = useCallback((): ReactNode => {

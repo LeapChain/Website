@@ -10,7 +10,7 @@
 
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-To start with, you can always check the [open issues](https://github.com/thenewboston-developers/Website/issues) in this repository. You can filter these issues using the labels and find the ones that suit your domain.
+To start with, you can always check the [open issues](https://github.com/LeapChain/Website/issues) in this repository. You can filter these issues using the labels and find the ones that suit your domain.
 
 All issues that have the **PR Reward** label are ready to be worked upon and specify the amount of coins to be transferred to the account of the person who solves that issue.
 
@@ -18,7 +18,7 @@ If you discover a new issue that is not yet reported, please open the same befor
 
 Please avoid working on issues that have the **Not Ready** label on them.
 
-The reward labels will be assigned to issues by the core team members based on certain parameters. If you want to create an issue with a design suggestion, please do it in the [design repository](https://github.com/thenewboston-developers/Design).
+The reward labels will be assigned to issues by the core team members based on certain parameters. If you want to create an issue with a design suggestion, please do it in the [design repository](https://github.com/LeapChain/Design).
 
 Every PR must be connected to an issue, so as stated above, before creating a PR, please raise an issue and reference it in the PR.
 

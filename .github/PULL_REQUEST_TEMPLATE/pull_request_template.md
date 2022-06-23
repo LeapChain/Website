@@ -31,7 +31,7 @@ Please delete options that are not relevant.
 
 ## Checklist:
 
-- [ ] This PR follows the rules under [contributor guidelines](https://github.com/thenewboston-developers/Website#contributing).
+- [ ] This PR follows the rules under [contributor guidelines](https://github.com/LeapChain/Website#contributing).
 - [ ] I have provided a preview/screen-capture
 - [ ] I have performed a self-review of my own code
 - [ ] I have commented my code, particularly in hard-to-understand areas
