@@ -9,8 +9,8 @@ const InternalTeamMemberPayments: FC = () => {
     <DocContainer className="Resource" title="Team Member Payments">
       <p>
         All team members are eligible to submit a timesheet each day via a GitHub issue in the{' '}
-        <A href="https://github.com/thenewboston-developers/Contributor-Payments">Contributor-Payments</A> repository.
-        This will be a record of all tasks that the team member worked on that day including:
+        <A href="https://github.com/LeapChain/Contributor-Payments">Contributor-Payments</A> repository. This will be a
+        record of all tasks that the team member worked on that day including:
       </p>
       <DocList variant="ul">
         <li>a short description of the task</li>

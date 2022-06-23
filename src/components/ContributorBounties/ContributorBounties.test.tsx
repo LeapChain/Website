@@ -72,7 +72,7 @@ describe('ContributorBounties', () => {
 
     const validHref = bounties.every((bounty, i) => {
       const propBounty = props.bounties[i];
-      const href = `https://github.com/thenewboston-developers/${propBounty.repository}/issues/${propBounty.issue_id}`;
+      const href = `https://github.com/LeapChain/${propBounty.repository}/issues/${propBounty.issue_id}`;
 
       return bounty.getAttribute('href') === href;
     });

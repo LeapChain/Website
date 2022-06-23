@@ -514,9 +514,7 @@ export const faqQuestionsAndAnswers: TopicQuestionAndAnswers[] = [
         answer: (
           <span>
             Create an issue here:{' '}
-            <A href="https://github.com/thenewboston-developers/Projects/issues">
-              https://github.com/thenewboston-developers/Projects/issues
-            </A>
+            <A href="https://github.com/LeapChain/Projects/issues">https://github.com/LeapChain/Projects/issues</A>
           </span>
         ),
         id: 'how-to-propose-project',

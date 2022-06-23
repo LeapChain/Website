@@ -15,7 +15,7 @@ const ContributorBounties: SFC<ContributorBountiesProps> = ({className, bounties
       <tr key={index} data-testid="ContributorBounties__row">
         <S.Td data-testid="ContributorBounties__bounty-title" title={title}>
           <S.IssueLink
-            href={`https://github.com/thenewboston-developers/${repository}/issues/${issue_id}`}
+            href={`https://github.com/LeapChain/${repository}/issues/${issue_id}`}
             iconSize={12}
             iconTotalSize={12}
           >
