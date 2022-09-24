@@ -1,21 +1,30 @@
 {
   "compilerOptions": {
-    "allowJs": true,
-    "allowSyntheticDefaultImports": true,
-    "baseUrl": "src",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "isolatedModules": true,
-    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@/src/components/*": ["src/components/*"],
+      "@/src/features/*": ["src/features/*"],
+      "@/src/hooks/*": ["src/hooks/*"],
+      "@/src/layouts/*": ["src/layouts/*"],
+      "@/src/services/*": ["src/services/*"],
+      "@/src/types/*": ["src/types/*"],
+      "@/src/utils/*": ["src/utils/*"],
+    },
+    "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "module": "esnext",
-    "moduleResolution": "node",
-    "noEmit": true,
-    "noFallthroughCasesInSwitch": true,
-    "resolveJsonModule": true,
+    "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "es5"
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true    
   },
-  "include": ["src"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "./src"],
+  "exclude": ["node_modules"]
 }

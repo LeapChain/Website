@@ -1,59 +1,34 @@
-## Table of Contents
-
-- [Contributing](#contributing)
-- [Getting Started](#getting-started)
-- [Community](#community)
-- [Donate](#donate)
-- [License](#license)
-
-## Contributing
-
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-To start with, you can always check the [open issues](https://github.com/LeapChain/Website/issues) in this repository. You can filter these issues using the labels and find the ones that suit your domain.
-
-All issues that have the **PR Reward** label are ready to be worked upon and specify the amount of coins to be transferred to the account of the person who solves that issue.
-
-If you discover a new issue that is not yet reported, please open the same before working on it. People who discover bugs will be rewarded with the amount of coins specified by the **Bug Bounty Owed** labels.
-
-Please avoid working on issues that have the **Not Ready** label on them.
-
-The reward labels will be assigned to issues by the core team members based on certain parameters. If you want to create an issue with a design suggestion, please do it in the [design repository](https://github.com/LeapChain/Design).
-
-Every PR must be connected to an issue, so as stated above, before creating a PR, please raise an issue and reference it in the PR.
-
-Before starting, add a comment to let others know that you'll be working on that issue.
-
-It is strictly advised to **create a single PR per issue**. In any case, where two or more issues have the same root cause, you can club them in a single PR, otherwise, refrain from doing so.
-
-Also, while working make sure you follow these guidelines:
-
-- [React / JSX Style Guide](https://theleapchain.com/style-guide/react)
-- [CSS / SASS Style Guide](https://theleapchain.com/style-guide/css)
-
-Next steps:
-
-1. Fork the project
-2. Create your feature branch
-3. Run `npm run lint` and make sure you have no errors
-4. Commit your changes
-5. Push to the branch
-6. Open a pull request
-
-For further help, you can check out the [FAQs](https://theleapchain.com/faq).
-
-Finally, feel free to shoot any queries or suggestions. Don't hesitate. ;)
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
-After cloning the repo, run the following command to install the project dependencies:
+First, run the development server:
 
 ```bash
-npm install
+npm run dev
+# or
+yarn dev
 ```
 
-Then to run the code, run the following command:
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```bash
-npm start
-```
+You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
