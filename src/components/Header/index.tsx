@@ -15,14 +15,17 @@ export const Header = ({
   type,
   url,
   title,
-}: PageProps) => (
-  <Head>
-    <title>{title} | LeapChain</title>
-    <meta name="description" property="og:description" content={description} />
-    <meta property="og:image" content={imageUrl} />
-    <meta property="og:title" content={title} />
-    <meta property="og:type" content={type} />
-    <meta property="og:url" content={url} />
-    <link rel="icon" href="/favicon.ico" />
-  </Head>
-)
+}: PageProps) => {
+  const _title = `${title} | LeapChain`
+    return (
+      <Head>
+        <title>{_title}</title>
+        <meta name="description" property="og:description" content={description} />
+        <meta property="og:image" content={imageUrl} />
+        <meta property="og:title" content={title} />
+        <meta property="og:type" content={type} />
+        <meta property="og:url" content={url} />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+    )
+  }
