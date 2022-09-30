@@ -1,15 +1,18 @@
 import type { NextPage } from 'next'
-import { Header } from '../src/components/Header'
-import { PageHeader } from '../src/components/PageHeader'
 
-import Image from 'next/image'
+import { MetaHeader } from '@/src/components/MetaHeader'
+import { PageHeader } from '@/src/components/NavHeader'
+import { Footer } from '@/src/components/Footer'
+import {DISCORD_URL} from '@/src/constants/links'
+
 import styles from '../styles/Home.module.css'
+
 
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       
-      <Header title='Home' />
+      <MetaHeader title='Home' />
 
       <PageHeader />
       
@@ -22,22 +25,11 @@ const Home: NextPage = () => {
           <p>
             We are in active development.
           </p>
-          <span>Stay tuned on <a href="">Discord</a> for updates and contribute to polls to make a difference.</span>
+          <span>Stay tuned on <a href={DISCORD_URL}>Discord</a> for updates and contribute to polls to make a difference.</span>
         </div>
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+      <Footer />      
     </div>
   )
 }

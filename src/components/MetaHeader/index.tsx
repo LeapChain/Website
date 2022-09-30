@@ -9,7 +9,7 @@ export interface PageProps {
   title?: string;
 }
 
-export const Header = ({
+export const MetaHeader = ({
   description,
   imageUrl,
   type,
