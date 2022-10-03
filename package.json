@@ -103,7 +103,7 @@
     "typescript-plugin-styled-components": "^2.0.0"
   },
   "engines": {
-    "node": ">=12"
+    "node": ">=16"
   },
   "husky": {
     "hooks": {
